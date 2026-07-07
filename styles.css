@@ -25,6 +25,7 @@ body {
   color: var(--sumi);
   font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", Arial, sans-serif;
   line-height: 1.75;
+  overflow-x: hidden;
 }
 img { display: block; max-width: 100%; }
 a { color: inherit; }
@@ -73,8 +74,9 @@ a { color: inherit; }
 .section, .page-hero, .home-hero {
   margin: 0 auto;
   max-width: 1180px;
-  padding-left: clamp(18px, 5vw, 54px);
-  padding-right: clamp(18px, 5vw, 54px);
+  padding-left: 0;
+  padding-right: 0;
+  width: min(1180px, calc(100% - clamp(32px, 8vw, 96px)));
 }
 .home-hero {
   align-items: center;
@@ -101,6 +103,8 @@ a { color: inherit; }
   background: transparent;
   border: 0;
   box-shadow: none;
+  margin-left: clamp(24px, 6vw, 72px);
+  margin-right: clamp(24px, 6vw, 72px);
   max-width: 620px;
   padding: 0;
 }

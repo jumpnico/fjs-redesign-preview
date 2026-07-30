@@ -2,10 +2,8 @@ backend:
   name: github
   repo: jumpnico/fjs-redesign-preview
   branch: main
-  # GitHub Pages needs a small OAuth proxy for Decap CMS login.
-  # After the OAuth proxy is prepared, add:
-  # base_url: https://your-oauth-proxy-domain.example.com
-  # auth_endpoint: auth
+  base_url: https://fjs-cms-auth.liu-peng.workers.dev
+  auth_endpoint: auth
 
 media_folder: "assets/uploads"
 public_folder: "assets/uploads"

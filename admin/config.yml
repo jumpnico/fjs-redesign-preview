@@ -1,0 +1,59 @@
+backend:
+  name: github
+  repo: jumpnico/fjs-redesign-preview
+  branch: main
+  # GitHub Pages needs a small OAuth proxy for Decap CMS login.
+  # After the OAuth proxy is prepared, add:
+  # base_url: https://your-oauth-proxy-domain.example.com
+  # auth_endpoint: auth
+
+media_folder: "assets/uploads"
+public_folder: "assets/uploads"
+
+collections:
+  - name: "news_data"
+    label: "お知らせ"
+    files:
+      - name: "posts"
+        label: "投稿一覧"
+        file: "data/posts.json"
+        fields:
+          - label: "Posts"
+            name: "posts"
+            widget: "list"
+            summary: "{{fields.date}} - {{fields.title.ja}}"
+            fields:
+              - { label: "ID", name: "id", widget: "string", hint: "例: exhibition-2026-08。英数字とハイフン推奨。" }
+              - label: "公開状態"
+                name: "status"
+                widget: "select"
+                default: "published"
+                options:
+                  - { label: "公開", value: "published" }
+                  - { label: "下書き", value: "draft" }
+              - { label: "日付", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+              - label: "カテゴリ"
+                name: "category"
+                widget: "object"
+                fields:
+                  - { label: "日本語", name: "ja", widget: "string" }
+                  - { label: "English", name: "en", widget: "string" }
+              - label: "タイトル"
+                name: "title"
+                widget: "object"
+                fields:
+                  - { label: "日本語", name: "ja", widget: "string" }
+                  - { label: "English", name: "en", widget: "string" }
+              - label: "概要"
+                name: "excerpt"
+                widget: "object"
+                fields:
+                  - { label: "日本語", name: "ja", widget: "text" }
+                  - { label: "English", name: "en", widget: "text" }
+              - { label: "カバー画像", name: "cover", widget: "image", required: false }
+              - label: "本文"
+                name: "body"
+                widget: "object"
+                fields:
+                  - { label: "日本語", name: "ja", widget: "markdown" }
+                  - { label: "English", name: "en", widget: "markdown" }

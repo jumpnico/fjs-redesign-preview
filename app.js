@@ -3,6 +3,7 @@ const translations = {
     menuHome: "ホーム",
     menuCompany: "会社概要",
     menuProducts: "製品案内",
+    menuNews: "お知らせ",
     menuClients: "主要取引先",
     menuContact: "お問い合わせ",
     heroEyebrow: "Interior products / OEM / ODM",
@@ -50,6 +51,9 @@ const translations = {
     clientsLead: "全国の量販店、専門店、ホームセンターなど、暮らしに関わる幅広い販売チャネルへ製品をお届けしています。",
     clientsPanelTitle: "全国の小売パートナーへ",
     clientsPanelBody: "フロアマット、寝具、雑貨など、日常生活に近いカテゴリーの商品を、量販店・専門店・ホームセンターなどのお客様へご提案しています。",
+    newsKicker: "News",
+    newsTitle: "お知らせ",
+    newsLead: "展示会出展、新製品、会社からのお知らせを掲載しています。",
     contactKicker: "Contact",
     contactTitle: "お問い合わせ",
     contactLead: "製品についてのご質問、販売店のご案内、大量一括購入、OEM・ODM生産など、お気軽にお問い合わせください。",
@@ -60,6 +64,7 @@ const translations = {
     menuHome: "Home",
     menuCompany: "Company",
     menuProducts: "Products",
+    menuNews: "News",
     menuClients: "Clients",
     menuContact: "Contact",
     heroEyebrow: "Interior products / OEM / ODM",
@@ -107,6 +112,9 @@ const translations = {
     clientsLead: "We supply products to mass retailers, specialty stores, home centers, and other channels across Japan.",
     clientsPanelTitle: "For retail partners across Japan",
     clientsPanelBody: "We propose everyday categories such as floor mats, bedding, and household goods to mass retailers, specialty stores, home centers, and related customers.",
+    newsKicker: "News",
+    newsTitle: "News",
+    newsLead: "Updates about exhibitions, new products, and company announcements.",
     contactKicker: "Contact",
     contactTitle: "Contact Us",
     contactLead: "Please contact us for product questions, retailer information, bulk purchases, or OEM and ODM production consultations.",
@@ -140,6 +148,7 @@ function setLanguage(lang) {
   languageButtons.forEach((button) => {
     button.classList.toggle("is-active", button.dataset.langOption === lang);
   });
+  window.dispatchEvent(new CustomEvent("fjs-language-change", { detail: { lang } }));
 }
 
 menuButton.addEventListener("click", () => setMenu(!menu.classList.contains("is-open")));

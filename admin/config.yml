@@ -16,42 +16,48 @@ collections:
         label: "投稿一覧"
         file: "data/posts.json"
         fields:
-          - label: "Posts"
+          - label: "投稿"
             name: "posts"
             widget: "list"
             summary: "{{fields.date}} - {{fields.title.ja}}"
+            hint: "お知らせページに表示する投稿を管理します。英語欄は空欄でも公開できます。"
             fields:
-              - { label: "ID", name: "id", widget: "string", hint: "例: exhibition-2026-08。英数字とハイフン推奨。" }
+              - { label: "ID", name: "id", widget: "string", hint: "URL識別用です。例: exhibition-2026-08。半角英数字とハイフンのみ推奨。公開後はなるべく変更しないでください。" }
               - label: "公開状態"
                 name: "status"
                 widget: "select"
                 default: "published"
+                hint: "公開を選ぶとサイトに表示されます。下書きを選ぶとサイトには表示されません。"
                 options:
                   - { label: "公開", value: "published" }
                   - { label: "下書き", value: "draft" }
-              - { label: "日付", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+              - { label: "日付", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, hint: "サイト上に表示される投稿日です。" }
               - label: "カテゴリ"
                 name: "category"
                 widget: "object"
+                hint: "例: 展示会、製品情報、会社情報、レポート。英語は後から追加できます。"
                 fields:
-                  - { label: "日本語", name: "ja", widget: "string" }
-                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "日本語（必須）", name: "ja", widget: "string", hint: "日本語ページと、英語が未入力の場合の表示に使われます。" }
+                  - { label: "English（任意）", name: "en", widget: "string", required: false, hint: "未入力の場合、英語ページでも日本語が表示されます。" }
               - label: "タイトル"
                 name: "title"
                 widget: "object"
+                hint: "投稿の見出しです。英語は後から追加できます。"
                 fields:
-                  - { label: "日本語", name: "ja", widget: "string" }
-                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "日本語（必須）", name: "ja", widget: "string", hint: "必ず入力してください。" }
+                  - { label: "English（任意）", name: "en", widget: "string", required: false, hint: "未入力の場合、英語ページでも日本語タイトルが表示されます。" }
               - label: "概要"
                 name: "excerpt"
                 widget: "object"
+                hint: "一覧ページに表示される短い説明文です。"
                 fields:
-                  - { label: "日本語", name: "ja", widget: "text" }
-                  - { label: "English", name: "en", widget: "text" }
-              - { label: "カバー画像", name: "cover", widget: "image", required: false }
+                  - { label: "日本語（必須）", name: "ja", widget: "text", hint: "1〜2文程度がおすすめです。" }
+                  - { label: "English（任意）", name: "en", widget: "text", required: false, hint: "未入力の場合、英語ページでも日本語概要が表示されます。" }
+              - { label: "カバー画像", name: "cover", widget: "image", required: false, hint: "任意です。推奨サイズは横長（例: 1600 x 900px）。未設定の場合は既定画像が表示されます。" }
               - label: "本文"
                 name: "body"
                 widget: "object"
+                hint: "記事本文です。英語は後から追加できます。"
                 fields:
-                  - { label: "日本語", name: "ja", widget: "markdown" }
-                  - { label: "English", name: "en", widget: "markdown" }
+                  - { label: "日本語（必須）", name: "ja", widget: "markdown", hint: "必ず入力してください。段落、箇条書き、リンクを使用できます。" }
+                  - { label: "English（任意）", name: "en", widget: "markdown", required: false, hint: "未入力の場合、英語ページでも日本語本文が表示されます。" }

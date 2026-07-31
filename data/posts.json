@@ -1,47 +1,25 @@
 {
   "posts": [
     {
-      "id": "exhibition-preview-sample",
-      "status": "published",
-      "date": "2026-07-30",
-      "category": {
-        "ja": "展示会",
-        "en": "Exhibition"
-      },
-      "title": {
-        "ja": "展示会出展のお知らせ（サンプル）テストTesting",
-        "en": "Exhibition Participation Notice (Sample)"
-      },
-      "excerpt": {
-        "ja": "FJSインターナショナルの展示会出展予定をお知らせするサンプル記事です。",
-        "en": "A sample article for announcing FJS International's upcoming exhibition participation."
-      },
-      "cover": "assets/uploads/2728403.jpg",
-      "body": {
-        "ja": "FJSインターナショナル株式会社は、今後の展示会出展情報をこちらのお知らせページでご案内していきます。\n\n出展予定、展示製品、当日の様子などを、写真とともに掲載できます。\n\nこの記事はCMS動作確認用のサンプルです。正式公開前に実際の内容へ差し替えてください。",
-        "en": "FJS International will use this News page to share future exhibition participation information.\n\nUpcoming exhibition details, featured products, and on-site reports can be published here with photos.\n\nThis article is a sample for CMS testing. Please replace it with actual content before official publication."
-      }
-    },
-    {
       "id": "exhibition-report-sample",
       "status": "published",
       "date": "2026-07-30",
       "category": {
         "ja": "レポート",
-        "en": "Report"
+        "en": ""
       },
       "title": {
         "ja": "展示会レポート（サンプル）",
-        "en": "Exhibition Report (Sample)"
+        "en": ""
       },
       "excerpt": {
         "ja": "展示会当日の様子やご来場のお礼を掲載するサンプル記事です。",
-        "en": "A sample article for sharing exhibition day updates and visitor appreciation."
+        "en": ""
       },
       "cover": "assets/home-hero-lifestyle.png",
       "body": {
         "ja": "展示会当日のブースの様子、展示製品、商談の雰囲気などを記事として残せます。\n\nお取引先様や新しいお客様へのご挨拶としても活用できます。\n\nこの記事はCMS動作確認用のサンプルです。正式公開前に実際の内容へ差し替えてください。",
-        "en": "This type of article can share booth photos, displayed products, and the atmosphere of the exhibition.\n\nIt can also be used as a message of appreciation to existing and new customers.\n\nThis article is a sample for CMS testing. Please replace it with actual content before official publication."
+        "en": ""
       }
     }
   ]

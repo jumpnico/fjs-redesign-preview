@@ -6,8 +6,19 @@ function currentLang() {
 
 function pick(value, lang) {
   if (!value) return "";
-  if (typeof value === "string") return value;
-  return value[lang] || value.ja || value.en || "";
+  if (typeof value === "string") return value.trim() ? value : "";
+
+  const localized = value[lang];
+  if (typeof localized === "string" && localized.trim()) return localized;
+  if (localized) return localized;
+
+  const japanese = value.ja;
+  if (typeof japanese === "string" && japanese.trim()) return japanese;
+  if (japanese) return japanese;
+
+  const english = value.en;
+  if (typeof english === "string" && english.trim()) return english;
+  return english || "";
 }
 
 function escapeHtml(value) {

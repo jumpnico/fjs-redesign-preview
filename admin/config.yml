@@ -53,7 +53,7 @@ collections:
                 fields:
                   - { label: "日本語（必須）", name: "ja", widget: "text", hint: "1〜2文程度がおすすめです。" }
                   - { label: "English（任意）", name: "en", widget: "text", required: false, hint: "未入力の場合、英語ページでも日本語概要が表示されます。" }
-              - { label: "カバー画像", name: "cover", widget: "image", required: false, hint: "任意です。推奨サイズは横長（例: 1600 x 900px）。未設定の場合は既定画像が表示されます。" }
+              - { label: "カバー画像", name: "cover", widget: "image", required: false, hint: "任意です。推奨サイズは横長（例: 1600 x 900px）。未設定の場合、詳細ページは画像なしの読みやすい記事レイアウトで表示されます。" }
               - label: "本文"
                 name: "body"
                 widget: "object"

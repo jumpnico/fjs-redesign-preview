@@ -99,18 +99,24 @@ async function renderPostDetail() {
   }
 
   document.title = `${pick(post.title, lang)} | FJSインターナショナル株式会社`;
+  const coverMarkup = post.cover
+    ? `<img class="post-cover" src="${escapeHtml(post.cover)}" alt="">`
+    : "";
+
   container.innerHTML = `
     <a class="back-link" href="news.html">${lang === "ja" ? "お知らせ一覧へ" : "Back to News"}</a>
-    <div class="post-hero-card">
-      <div class="news-meta">
-        <time datetime="${escapeHtml(post.date)}">${escapeHtml(formatDate(post.date, lang))}</time>
-        <span>${escapeHtml(pick(post.category, lang))}</span>
+    <div class="post-article">
+      <div class="post-article-header">
+        <div class="news-meta">
+          <time datetime="${escapeHtml(post.date)}">${escapeHtml(formatDate(post.date, lang))}</time>
+          <span>${escapeHtml(pick(post.category, lang))}</span>
+        </div>
+        <h1>${escapeHtml(pick(post.title, lang))}</h1>
+        <p>${escapeHtml(pick(post.excerpt, lang))}</p>
       </div>
-      <h1>${escapeHtml(pick(post.title, lang))}</h1>
-      <p>${escapeHtml(pick(post.excerpt, lang))}</p>
+      ${coverMarkup}
+      <div class="post-body">${renderBody(pick(post.body, lang))}</div>
     </div>
-    <img class="post-cover" src="${escapeHtml(post.cover || "assets/home-hero-lifestyle.png")}" alt="">
-    <div class="post-body">${renderBody(pick(post.body, lang))}</div>
   `;
 }
 

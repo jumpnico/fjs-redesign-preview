@@ -20,11 +20,42 @@
     </header>
 
     <main>
-      <section class="home-hero">
-        <div class="hero-panel">
-          <p class="eyebrow" data-i18n="heroEyebrow">Interior products / OEM / ODM</p>
-          <h1 data-i18n="homeTitle">日々の暮らしに、手に取りやすい品質を。</h1>
-          <p data-i18n="homeLead">FJSインターナショナル株式会社は、インテリア・寝具・雑貨を中心に、企画から生産背景を活かしたOEM・ODMまで、暮らしに寄り添う製品づくりを行っています。</p>
+      <section class="home-hero hero-slider" aria-label="FJS highlights">
+        <div class="hero-track" data-hero-track>
+          <article class="hero-slide is-active" style="background-image: linear-gradient(90deg, rgba(21, 27, 29, 0.74), rgba(21, 27, 29, 0.38), rgba(21, 27, 29, 0.12)), url('assets/home-hero-lifestyle.png');">
+            <div class="hero-panel">
+              <p class="eyebrow" data-i18n="heroSlide1Kicker">Lifestyle Products</p>
+              <h1 data-i18n="heroSlide1Title">暮らしに寄り添う商品づくり。</h1>
+              <p data-i18n="heroSlide1Lead">寝具・インテリア・生活用品を中心に、日々の暮らしへ自然に取り入れられる品質を提案します。</p>
+            </div>
+          </article>
+          <article class="hero-slide" style="background-image: linear-gradient(90deg, rgba(21, 27, 29, 0.72), rgba(21, 27, 29, 0.34), rgba(21, 27, 29, 0.08)), url('assets/hero-seasonal-needs.png');">
+            <div class="hero-panel">
+              <p class="eyebrow" data-i18n="heroSlide2Kicker">Seasonal Needs</p>
+              <h1 data-i18n="heroSlide2Title">季節とニーズに合わせた企画。</h1>
+              <p data-i18n="heroSlide2Lead">暑さ対策、防災、アウトドアなど、生活シーンの変化に合わせて商品を企画します。</p>
+            </div>
+          </article>
+          <article class="hero-slide" style="background-image: linear-gradient(90deg, rgba(21, 27, 29, 0.74), rgba(21, 27, 29, 0.42), rgba(21, 27, 29, 0.12)), url('assets/hero-oem-odm.png');">
+            <div class="hero-panel">
+              <p class="eyebrow" data-i18n="heroSlide3Kicker">OEM / ODM</p>
+              <h1 data-i18n="heroSlide3Title">小売販売からOEM・ODMまで。</h1>
+              <p data-i18n="heroSlide3Lead">販売実績と生産背景を活かし、ブランドや販売計画に合わせた製品づくりをサポートします。</p>
+            </div>
+          </article>
+          <article class="hero-slide hero-slide-rakuten" style="background-image: linear-gradient(90deg, rgba(21, 27, 29, 0.76), rgba(21, 27, 29, 0.44), rgba(21, 27, 29, 0.18)), url('assets/hero-rakuten-store.png');">
+            <div class="hero-panel">
+              <p class="eyebrow" data-i18n="heroSlide4Kicker">Rakuten Store</p>
+              <h1 data-i18n="heroSlide4Title">FJS楽天市場店で販売中。</h1>
+              <p data-i18n="heroSlide4Lead">寝具、生活雑貨、防災・食品など、一部商品は楽天市場店でもご覧いただけます。</p>
+              <a class="hero-link" href="https://www.rakuten.co.jp/fjsi/" target="_blank" rel="noopener" data-i18n="heroRakutenLink">楽天市場店を見る</a>
+            </div>
+          </article>
+        </div>
+        <div class="hero-slider-controls" aria-label="Slider controls">
+          <button type="button" class="hero-arrow" data-hero-prev aria-label="Previous slide">‹</button>
+          <div class="hero-dots" data-hero-dots aria-label="Slide position"></div>
+          <button type="button" class="hero-arrow" data-hero-next aria-label="Next slide">›</button>
         </div>
       </section>
 

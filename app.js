@@ -6,9 +6,19 @@ const translations = {
     menuNews: "お知らせ",
     menuClients: "主要取引先",
     menuContact: "お問い合わせ",
-    heroEyebrow: "Interior products / OEM / ODM",
-    homeTitle: "日々の暮らしに、手に取りやすい品質を。",
-    homeLead: "FJSインターナショナル株式会社は、インテリア・寝具・雑貨を中心に、企画から生産背景を活かしたOEM・ODMまで、暮らしに寄り添う製品づくりを行っています。",
+    heroSlide1Kicker: "Lifestyle Products",
+    heroSlide1Title: "暮らしに寄り添う商品づくり。",
+    heroSlide1Lead: "寝具・インテリア・生活用品を中心に、日々の暮らしへ自然に取り入れられる品質を提案します。",
+    heroSlide2Kicker: "Seasonal Needs",
+    heroSlide2Title: "季節とニーズに合わせた企画。",
+    heroSlide2Lead: "暑さ対策、防災、アウトドアなど、生活シーンの変化に合わせて商品を企画します。",
+    heroSlide3Kicker: "OEM / ODM",
+    heroSlide3Title: "小売販売からOEM・ODMまで。",
+    heroSlide3Lead: "販売実績と生産背景を活かし、ブランドや販売計画に合わせた製品づくりをサポートします。",
+    heroSlide4Kicker: "Rakuten Store",
+    heroSlide4Title: "FJS楽天市場店で販売中。",
+    heroSlide4Lead: "寝具、生活雑貨、防災・食品など、一部商品は楽天市場店でもご覧いただけます。",
+    heroRakutenLink: "楽天市場店を見る",
     homeCtaProducts: "製品を見る",
     homeCtaCompany: "会社を知る",
     homeIntroKicker: "Our Focus",
@@ -26,26 +36,65 @@ const translations = {
     companyKicker: "Company",
     companyTitle: "会社概要",
     companyLead: "FJSインターナショナル株式会社は、心をこめた“よきモノづくり”を通じて、豊かな暮らしをご提案することを第一に考えております。",
-    companyBody: "自社開発によるデザインと価格のバランスを整えた高品質なインテリア製品の普及を目指して2019年に設立されました。消費者ニーズが高い商品を提供することで、お客様に満足して頂くことを大切にしています。",
+    companyBody: "FJSインターナショナル株式会社は、インテリア製品、寝具、雑貨類、食品など、暮らしに関わる幅広い商品を取り扱っています。全国の量販店、ホームセンター等への販売を通じて、日々の生活に取り入れやすい商品をご提案します。",
     companyNameLabel: "商号",
     companyName: "FJSインターナショナル株式会社",
-    addressLabel: "所在地",
-    address: "東京都中央区人形町2-6-7 SIL人形町11階",
-    foundedLabel: "設立",
-    founded: "令和元年7月",
+    addressLabel: "本社所在地",
+    address: "東京都中央区日本橋大伝馬町11-10",
+    foundedLabel: "創業・設立",
+    founded: "2019年",
     capitalLabel: "資本金",
     capital: "500万円",
-    businessLabel: "事業内容",
-    business: "インテリア・寝具・雑貨の輸入卸販売",
+    representativeLabel: "代表者",
+    representative: "代表取締役 李 洪志",
+    productsHandledLabel: "主要取扱い商品",
+    productsHandled: "インテリア製品 寝具 雑貨類 食品",
+    salesChannelsLabel: "主要販売先",
+    salesChannels: "全国の量販店 ホームセンター等",
+    affiliateLabel: "関連会社",
+    affiliate: "フジスター株式会社",
     productsKicker: "Products",
     productsTitle: "製品案内",
-    productsLead: "自社によりインテリアの企画製造卸販売を行っております。また、当社の企画・生産背景を活用したOEM・ODM事業も行っております。",
-    productFloorTitle: "フロアマット",
-    productFloorBody: "高品質なフロアマットをオリジナルデザインで生産しています。",
-    productBeddingTitle: "寝具",
-    productBeddingBody: "枕、マットレス、敷きパッドなど寝具全般を企画・生産しています。",
-    productOemTitle: "OEM生産",
-    productOemBody: "当社の高品質製品をお客様のブランドで。ご要望に応じてOEM・ODM生産も行っております。",
+    productsLead: "寝具・インテリア、生活雑貨、食品、防災用品からOEM・ODMまで、暮らしに近いカテゴリーを幅広く扱っています。",
+    rakutenKicker: "Online Store",
+    rakutenTitle: "一部商品はFJS楽天市場店で販売しています。",
+    rakutenLead: "法人・店舗向けのご相談は当サイトのお問い合わせへ、個人のお客様のご購入は楽天市場店をご利用ください。",
+    rakutenButton: "楽天市場店を見る",
+    catBeddingKicker: "Category 01",
+    catBeddingTitle: "寝具・インテリア",
+    catBeddingLead: "敷きパッド、肌布団、ラグなど、毎日の住空間になじむ商品を企画・販売しています。",
+    catLifestyleKicker: "Category 02",
+    catLifestyleTitle: "生活雑貨・季節用品",
+    catLifestyleLead: "暑さ対策、虫よけ、身の回りのケア用品など、暮らしの困りごとに寄り添う商品です。",
+    catFoodKicker: "Category 03",
+    catFoodTitle: "食品",
+    catFoodLead: "日常の食卓に取り入れやすい食品から、贈答向けの日本茶、非常時の備蓄食品まで、用途に合わせて幅広く提案しています。",
+    catDisasterKicker: "Category 04",
+    catDisasterTitle: "防災用品",
+    catDisasterLead: "家庭、車中泊、アウトドア、施設備蓄など、非常時の安心につながる商品を扱います。",
+    catOemKicker: "Category 05",
+    catOemTitle: "OEM・ODM",
+    catOemLead: "販売計画やブランドの方向性に合わせ、仕様調整、企画、生産背景を活かしたご相談に対応します。",
+    itemCoolingPad: "冷感くしゅくしゅ敷きパッド",
+    itemRug: "もちもち冷感ラグ",
+    itemBeddingGoods: "刺繍キルト掛けカバー",
+    itemMosquito: "360°虫よけキーホルダー",
+    itemCoolRing: "極太クールリング",
+    itemFan: "冷感不織布マスク",
+    itemEnergyBar: "20年保存 非常食バー",
+    itemStockFood: "静岡県産 御抹茶",
+    itemCorporateFood: "さつまいも春雨",
+    itemCo: "CO・CO2 4in1チェッカー",
+    itemCo2: "スティックランプ",
+    itemDisasterGoods: "一酸化炭素チェッカー",
+    oemContactTitle: "OEM・ODMのご相談",
+    oemContactBody: "素材、サイズ、色、パッケージ、生産背景、販売計画に合わせた商品企画など、内容に応じてご相談ください。",
+    oemContactButton: "お問い合わせへ",
+    itemBrandPlanning: "ブランド向け商品企画",
+    itemSpecPackage: "仕様・パッケージ相談",
+    itemProductionSupport: "生産・販売サポート",
+    modalKicker: "Product Detail",
+    modalLink: "詳しく見る",
     clientsKicker: "Clients",
     clientsTitle: "主要取引先",
     clientsLead: "全国の量販店、専門店、ホームセンターなど、暮らしに関わる幅広い販売チャネルへ製品をお届けしています。",
@@ -58,6 +107,8 @@ const translations = {
     contactTitle: "お問い合わせ",
     contactLead: "製品についてのご質問、販売店のご案内、大量一括購入、OEM・ODM生産など、お気軽にお問い合わせください。",
     contactPhoneTitle: "お電話でのお問い合わせ",
+    contactEmailTitle: "メールでのお問い合わせ",
+    contactAccessTitle: "所在地",
     contactAddress: "東京都中央区人形町2-6-7 SIL人形町11階"
   },
   en: {
@@ -67,9 +118,19 @@ const translations = {
     menuNews: "News",
     menuClients: "Clients",
     menuContact: "Contact",
-    heroEyebrow: "Interior products / OEM / ODM",
-    homeTitle: "Accessible quality for everyday living.",
-    homeLead: "FJS International creates interior products, bedding, and household goods, from planning and wholesale to OEM and ODM production built on trusted manufacturing networks.",
+    heroSlide1Kicker: "Lifestyle Products",
+    heroSlide1Title: "Products close to everyday living.",
+    heroSlide1Lead: "We propose accessible quality across bedding, interiors, and household goods for daily life.",
+    heroSlide2Kicker: "Seasonal Needs",
+    heroSlide2Title: "Planning for seasons and needs.",
+    heroSlide2Lead: "From heat protection to disaster preparedness and outdoor scenes, we develop products around changing lifestyles.",
+    heroSlide3Kicker: "OEM / ODM",
+    heroSlide3Title: "From retail sales to OEM and ODM.",
+    heroSlide3Lead: "With retail experience and manufacturing networks, we support products aligned with customer brands and sales plans.",
+    heroSlide4Kicker: "Rakuten Store",
+    heroSlide4Title: "Available at FJS Rakuten Store.",
+    heroSlide4Lead: "Selected bedding, household goods, disaster-preparedness items, and food products are available through our Rakuten store.",
+    heroRakutenLink: "View Rakuten Store",
     homeCtaProducts: "View products",
     homeCtaCompany: "About company",
     homeIntroKicker: "Our Focus",
@@ -87,26 +148,65 @@ const translations = {
     companyKicker: "Company",
     companyTitle: "Company Profile",
     companyLead: "FJS International focuses on sincere manufacturing and products that support richer everyday living.",
-    companyBody: "Founded in July 2019, FJS International aims to provide high-quality interior products developed in-house with a thoughtful balance of design and price. We value customer satisfaction by providing products that meet strong consumer needs.",
+    companyBody: "FJS International handles a broad range of everyday products, including interior goods, bedding, household goods, and food products. Through sales to mass retailers, home centers, and related channels across Japan, we propose products that are easy to bring into daily life.",
     companyNameLabel: "Company name",
     companyName: "FJS International Co., Ltd.",
-    addressLabel: "Address",
-    address: "SIL Ningyocho 11F, 2-6-7 Ningyocho, Chuo-ku, Tokyo",
-    foundedLabel: "Established",
-    founded: "July 2019",
+    addressLabel: "Head office",
+    address: "11-10 Nihonbashi Odenmacho, Chuo-ku, Tokyo",
+    foundedLabel: "Founded / Established",
+    founded: "2019",
     capitalLabel: "Capital",
     capital: "5 million yen",
-    businessLabel: "Business",
-    business: "Import, wholesale, and sales of interior goods, bedding, and household products",
+    representativeLabel: "Representative",
+    representative: "Representative Director Hongzhi Li",
+    productsHandledLabel: "Main products",
+    productsHandled: "Interior goods, bedding, household goods, food products",
+    salesChannelsLabel: "Main sales channels",
+    salesChannels: "Mass retailers, home centers, and related channels across Japan",
+    affiliateLabel: "Affiliated company",
+    affiliate: "Fujistar Co., Ltd.",
     productsKicker: "Products",
     productsTitle: "Products",
-    productsLead: "We plan, manufacture, and wholesale interior products. We also provide OEM and ODM production using our planning and manufacturing network.",
-    productFloorTitle: "Floor Mats",
-    productFloorBody: "Original high-quality floor mats designed and produced for everyday use.",
-    productBeddingTitle: "Bedding",
-    productBeddingBody: "Planning and production of pillows, mattresses, mattress pads, and other bedding products.",
-    productOemTitle: "OEM Production",
-    productOemBody: "We provide OEM and ODM production for customer brands according to product requirements.",
+    productsLead: "We handle categories close to daily life, from bedding, interiors, household goods, food, and disaster-preparedness items to OEM and ODM.",
+    rakutenKicker: "Online Store",
+    rakutenTitle: "Selected products are available at FJS Rakuten Store.",
+    rakutenLead: "For corporate and retail inquiries, please contact us through this website. For individual purchases, please visit our Rakuten store.",
+    rakutenButton: "View Rakuten Store",
+    catBeddingKicker: "Category 01",
+    catBeddingTitle: "Bedding and Interiors",
+    catBeddingLead: "Mattress pads, light quilts, rugs, and interior goods designed for everyday spaces.",
+    catLifestyleKicker: "Category 02",
+    catLifestyleTitle: "Household and Seasonal Goods",
+    catLifestyleLead: "Seasonal products for heat protection, insect repellent, and daily care needs.",
+    catFoodKicker: "Category 03",
+    catFoodTitle: "Food",
+    catFoodLead: "A practical food lineup ranging from everyday ingredients to Japanese tea for gifts and emergency stockpile foods.",
+    catDisasterKicker: "Category 04",
+    catDisasterTitle: "Disaster-Preparedness Goods",
+    catDisasterLead: "Products for home safety, car stays, outdoor activities, and emergency preparedness.",
+    catOemKicker: "Category 05",
+    catOemTitle: "OEM / ODM",
+    catOemLead: "Planning, specification adjustment, and production consultation aligned with sales plans and brand direction.",
+    itemCoolingPad: "Cooling Crinkle Mattress Pad",
+    itemRug: "Soft Cooling Rug",
+    itemBeddingGoods: "Embroidered Quilt Cover",
+    itemMosquito: "360° Mosquito Repellent Key Holder",
+    itemCoolRing: "Wide Cooling Neck Ring",
+    itemFan: "Cooling Disposable Mask",
+    itemEnergyBar: "20-Year Emergency Food Bar",
+    itemStockFood: "Shizuoka Matcha Tea",
+    itemCorporateFood: "Sweet Potato Glass Noodles",
+    itemCo: "CO / CO2 4-in-1 Detector",
+    itemCo2: "Stick LED Lamp",
+    itemDisasterGoods: "Carbon Monoxide Checker",
+    oemContactTitle: "OEM / ODM Consultation",
+    oemContactBody: "Please contact us about materials, sizes, colors, packaging, production background, and product planning aligned with your sales plan.",
+    oemContactButton: "Contact us",
+    itemBrandPlanning: "Product Planning for Brands",
+    itemSpecPackage: "Specification and Packaging",
+    itemProductionSupport: "Production and Sales Support",
+    modalKicker: "Product Detail",
+    modalLink: "View details",
     clientsKicker: "Clients",
     clientsTitle: "Major Clients",
     clientsLead: "We supply products to mass retailers, specialty stores, home centers, and other channels across Japan.",
@@ -119,6 +219,8 @@ const translations = {
     contactTitle: "Contact Us",
     contactLead: "Please contact us for product questions, retailer information, bulk purchases, or OEM and ODM production consultations.",
     contactPhoneTitle: "Contact by phone",
+    contactEmailTitle: "Contact by email",
+    contactAccessTitle: "Address",
     contactAddress: "SIL Ningyocho 11F, 2-6-7 Ningyocho, Chuo-ku, Tokyo"
   }
 };
@@ -128,6 +230,8 @@ const menu = document.querySelector(".floating-menu");
 const languageButtons = document.querySelectorAll("[data-lang-option]");
 const translatedNodes = document.querySelectorAll("[data-i18n]");
 const page = document.body.dataset.page;
+let currentHeroSlide = 0;
+let heroTimer;
 
 document.querySelector(`[data-page-link="${page}"]`)?.classList.add("is-active");
 
@@ -151,6 +255,95 @@ function setLanguage(lang) {
   window.dispatchEvent(new CustomEvent("fjs-language-change", { detail: { lang } }));
 }
 
+function setupHeroSlider() {
+  const slider = document.querySelector(".hero-slider");
+  if (!slider) return;
+
+  const slides = [...slider.querySelectorAll(".hero-slide")];
+  const dotsWrap = slider.querySelector("[data-hero-dots]");
+  const prev = slider.querySelector("[data-hero-prev]");
+  const next = slider.querySelector("[data-hero-next]");
+  if (!slides.length || !dotsWrap) return;
+
+  dotsWrap.innerHTML = slides.map((_, index) => `<button type="button" aria-label="Go to slide ${index + 1}" data-hero-dot="${index}"></button>`).join("");
+  const dots = [...dotsWrap.querySelectorAll("[data-hero-dot]")];
+
+  function showSlide(index) {
+    currentHeroSlide = (index + slides.length) % slides.length;
+    slides.forEach((slide, slideIndex) => slide.classList.toggle("is-active", slideIndex === currentHeroSlide));
+    dots.forEach((dot, dotIndex) => dot.classList.toggle("is-active", dotIndex === currentHeroSlide));
+  }
+
+  function restartTimer() {
+    window.clearInterval(heroTimer);
+    heroTimer = window.setInterval(() => showSlide(currentHeroSlide + 1), 6800);
+  }
+
+  prev?.addEventListener("click", () => {
+    showSlide(currentHeroSlide - 1);
+    restartTimer();
+  });
+  next?.addEventListener("click", () => {
+    showSlide(currentHeroSlide + 1);
+    restartTimer();
+  });
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      showSlide(Number(dot.dataset.heroDot));
+      restartTimer();
+    });
+  });
+
+  let touchStart = 0;
+  slider.addEventListener("touchstart", (event) => {
+    touchStart = event.touches[0].clientX;
+  }, { passive: true });
+  slider.addEventListener("touchend", (event) => {
+    const distance = event.changedTouches[0].clientX - touchStart;
+    if (Math.abs(distance) > 42) {
+      showSlide(currentHeroSlide + (distance < 0 ? 1 : -1));
+      restartTimer();
+    }
+  }, { passive: true });
+
+  showSlide(0);
+  restartTimer();
+}
+
+function setupProductModal() {
+  const modal = document.querySelector("[data-product-modal]");
+  if (!modal) return;
+
+  const image = modal.querySelector("[data-product-modal-image]");
+  const title = modal.querySelector("[data-product-modal-title]");
+  const body = modal.querySelector("[data-product-modal-body]");
+  const link = modal.querySelector("[data-product-modal-link]");
+
+  function closeModal() {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+  }
+
+  document.querySelectorAll(".product-preview").forEach((button) => {
+    button.addEventListener("click", () => {
+      const lang = document.documentElement.lang || "ja";
+      const imageUrl = button.style.getPropertyValue("--product-image").replace(/^url\(['"]?/, "").replace(/['"]?\)$/, "");
+      image.src = imageUrl;
+      title.textContent = button.dataset[`productTitle${lang === "ja" ? "Ja" : "En"}`] || button.dataset.productTitleJa;
+      body.textContent = button.dataset[`productBody${lang === "ja" ? "Ja" : "En"}`] || button.dataset.productBodyJa;
+      link.href = button.dataset.productLink || "contact.html";
+      link.target = link.href.endsWith("contact.html") ? "_self" : "_blank";
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+    });
+  });
+
+  modal.querySelectorAll("[data-product-close]").forEach((button) => button.addEventListener("click", closeModal));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeModal();
+  });
+}
+
 menuButton.addEventListener("click", () => setMenu(!menu.classList.contains("is-open")));
 menu.addEventListener("click", (event) => {
   if (event.target.matches("a")) setMenu(false);
@@ -163,3 +356,5 @@ document.addEventListener("keydown", (event) => {
 });
 
 setLanguage(localStorage.getItem("fjs-lang") || "ja");
+setupHeroSlider();
+setupProductModal();

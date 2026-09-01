@@ -155,11 +155,17 @@ const translations = {
     newsLead: "展示会出展、新製品、会社からのお知らせを掲載しています。",
     contactKicker: "Contact",
     contactTitle: "お問い合わせ",
-    contactLead: "製品についてのご質問、販売店のご案内、大量一括購入、OEM・ODM生産など、お気軽にお問い合わせください。",
+    contactLead: "商品についてのご質問、OEM・ODM、ブランドとの協業、お取引に関するご相談など、お気軽にお問い合わせください。",
+    contactNote: "お問い合わせ内容によっては、ご回答までにお時間をいただく場合がございます。あらかじめご了承ください。",
+    contactRequiredNote: "「必須」と表示されている項目は必ずご入力ください。",
+    contactDirectTitle: "直接のご連絡先",
     contactPhoneTitle: "お電話でのお問い合わせ",
     contactEmailTitle: "メールでのお問い合わせ",
     contactAccessTitle: "所在地",
-    contactAddress: "〒103-0013 東京都中央区日本橋人形町2-6-7 SIL人形町ビル 11F"
+    contactAddress: "〒103-0013 東京都中央区日本橋人形町2-6-7 SIL人形町ビル 11F",
+    footerPrivacy: "プライバシーポリシー",
+    privacyKicker: "Privacy Policy",
+    privacyTitle: "プライバシーポリシー"
   },
   en: {
     menuHome: "Home",
@@ -317,11 +323,17 @@ const translations = {
     newsLead: "Updates about exhibitions, new products, and company announcements.",
     contactKicker: "Contact",
     contactTitle: "Contact Us",
-    contactLead: "Please contact us for product questions, retailer information, bulk purchases, or OEM and ODM production consultations.",
+    contactLead: "Please feel free to contact us regarding products, OEM/ODM projects, brand collaboration, or other business inquiries.",
+    contactNote: "Depending on the nature of your inquiry, it may take some time for us to respond. Thank you for your understanding.",
+    contactRequiredNote: "Fields marked “Required” must be completed.",
+    contactDirectTitle: "Direct Contact",
     contactPhoneTitle: "Contact by phone",
     contactEmailTitle: "Contact by email",
     contactAccessTitle: "Address",
-    contactAddress: "SIL NINGYO-CHO BUILDING 11F, 2-6-7 NIHONBASHI NINGYO-CHO, CHUO-KU, TOKYO 103-0013, JAPAN"
+    contactAddress: "SIL NINGYO-CHO BUILDING 11F, 2-6-7 NIHONBASHI NINGYO-CHO, CHUO-KU, TOKYO 103-0013, JAPAN",
+    footerPrivacy: "Privacy Policy",
+    privacyKicker: "Privacy Policy",
+    privacyTitle: "Privacy Policy"
   }
 };
 
@@ -422,6 +434,7 @@ function initGlobalChrome() {
         <p><strong>FJS International Co., Ltd.</strong></p>
         <p>〒103-0013 東京都中央区日本橋人形町2-6-7 SIL人形町ビル 11F</p>
         <p>MAIL connect@fjsi.co.jp</p>
+        <p class="footer-legal"><a href="/privacy/" data-i18n="footerPrivacy">プライバシーポリシー</a></p>
         <p class="footer-copy">© FJS International Co., Ltd. All Rights Reserved.</p>
       </div>
     `;

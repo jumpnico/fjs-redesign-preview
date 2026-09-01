@@ -13,28 +13,124 @@
       <div class="language-switch" aria-label="Language switch"><button class="lang-button is-active" type="button" data-lang-option="ja">JP</button><button class="lang-button" type="button" data-lang-option="en">EN</button></div>
     </header>
     <main>
-      <section class="section contact-editorial-layout">
-        <div class="contact-editorial-copy">
+      <section class="section contact-form-page">
+        <div class="contact-form-heading">
           <p class="eyebrow" data-i18n="contactKicker">Contact</p>
           <h1 data-i18n="contactTitle">お問い合わせ</h1>
-          <p class="contact-intro" data-i18n="contactLead">製品についてのご質問、販売店のご案内、大量一括購入、OEM・ODM生産など、お気軽にお問い合わせください。</p>
+          <p data-i18n="contactLead">商品についてのご質問、OEM・ODM、ブランドとの協業、お取引に関するご相談など、お気軽にお問い合わせください。</p>
+          <p data-i18n="contactNote">お問い合わせ内容によっては、ご回答までにお時間をいただく場合がございます。あらかじめご了承ください。</p>
+          <p class="required-note" data-i18n="contactRequiredNote">「必須」と表示されている項目は必ずご入力ください。</p>
+        </div>
 
-          <div class="contact-direct-list">
-            <div class="contact-direct-item">
-              <p class="contact-direct-label">EMAIL</p>
-              <a class="contact-direct-link" href="mailto:connect@fjsi.co.jp">connect@fjsi.co.jp</a>
+        <form class="inquiry-form" id="inquiry-form" novalidate>
+          <div class="form-status" data-form-status role="status" aria-live="polite"></div>
+          <div class="form-input-step" data-form-step="input">
+            <div class="form-grid">
+              <div class="form-field form-field-full">
+                <label for="inquiry-type"><span data-contact-text="inquiryType">お問い合わせ種別</span> <span class="field-marker" data-contact-text="required">必須</span></label>
+                <select id="inquiry-type" data-field="inquiryType" autocomplete="off" required></select>
+                <p class="field-error" data-error-for="inquiryType"></p>
+              </div>
+
+              <div class="form-field">
+                <label for="company"><span data-contact-text="company">会社名</span> <span class="field-marker" data-contact-text="required">必須</span></label>
+                <input id="company" type="text" data-field="company" autocomplete="organization" required>
+                <p class="field-error" data-error-for="company"></p>
+              </div>
+              <div class="form-field">
+                <label for="department"><span data-contact-text="department">部署名</span> <span class="field-marker optional" data-contact-text="optional">任意</span></label>
+                <input id="department" type="text" data-field="department" autocomplete="organization-title">
+              </div>
+
+              <div class="form-field">
+                <label for="name"><span data-contact-text="name">お名前</span> <span class="field-marker" data-contact-text="required">必須</span></label>
+                <input id="name" type="text" data-field="name" autocomplete="name" required>
+                <p class="field-error" data-error-for="name"></p>
+              </div>
+              <div class="form-field" data-ja-only>
+                <label for="furigana"><span data-contact-text="furigana">ふりがな</span> <span class="field-marker" data-contact-text="required">必須</span></label>
+                <input id="furigana" type="text" data-field="furigana" autocomplete="off" required>
+                <p class="field-error" data-error-for="furigana"></p>
+              </div>
+
+              <div class="form-field">
+                <label for="email"><span data-contact-text="email">メールアドレス</span> <span class="field-marker" data-contact-text="required">必須</span></label>
+                <input id="email" type="email" data-field="email" autocomplete="email" required>
+                <p class="field-error" data-error-for="email"></p>
+              </div>
+              <div class="form-field">
+                <label for="confirm-email"><span data-contact-text="confirmEmail">メールアドレス（確認用）</span> <span class="field-marker" data-contact-text="required">必須</span></label>
+                <input id="confirm-email" type="email" data-field="confirmEmail" autocomplete="email" required>
+                <p class="field-error" data-error-for="confirmEmail"></p>
+              </div>
+
+              <div class="form-field">
+                <label for="phone"><span data-contact-text="phone">電話番号</span> <span class="field-marker" data-contact-text="required">必須</span></label>
+                <input id="phone" type="tel" data-field="phone" autocomplete="tel" required>
+                <p class="field-error" data-error-for="phone"></p>
+              </div>
+              <div class="form-field">
+                <label for="postal-code"><span data-contact-text="postalCode">郵便番号</span> <span class="field-marker optional" data-contact-text="optional">任意</span></label>
+                <input id="postal-code" type="text" data-field="postalCode" autocomplete="postal-code">
+              </div>
+
+              <div class="form-field">
+                <label for="prefecture-ja"><span data-contact-text="prefecture">都道府県</span> <span class="field-marker" data-contact-text="required">必須</span></label>
+                <select id="prefecture-ja" data-field="prefectureJa" autocomplete="address-level1" required></select>
+                <input id="prefecture-en" class="is-hidden" type="text" data-field="prefectureEn" autocomplete="address-level1">
+                <p class="field-error" data-error-for="prefecture"></p>
+              </div>
+              <div class="form-field">
+                <label for="address"><span data-contact-text="address">住所</span> <span class="field-marker optional" data-contact-text="optional">任意</span></label>
+                <input id="address" type="text" data-field="address" autocomplete="street-address">
+              </div>
+
+              <div class="form-field form-field-full">
+                <label for="message"><span data-contact-text="message">お問い合わせ内容</span> <span class="field-marker" data-contact-text="required">必須</span></label>
+                <textarea id="message" data-field="message" rows="8" required></textarea>
+                <p class="field-error" data-error-for="message"></p>
+              </div>
+
+              <div class="form-field form-field-full consent-field">
+                <p data-contact-text="privacyIntro">プライバシーポリシーをご確認のうえ、同意いただける場合はチェックしてください。</p>
+                <label class="checkbox-label" for="privacy-consent">
+                  <input id="privacy-consent" type="checkbox" data-field="privacyConsent" required>
+                  <span data-contact-html="privacyConsent">プライバシーポリシーに同意する</span>
+                </label>
+                <p class="field-error" data-error-for="privacyConsent"></p>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="primary-link form-button" type="button" data-review-button data-contact-text="reviewButton">入力内容を確認する</button>
             </div>
           </div>
-        </div>
-        <div class="contact-editorial-image">
-          <img src="/assets/contact-editorial.png" alt="">
-        </div>
+
+          <div class="form-confirm-step is-hidden" data-form-step="confirm" aria-live="polite">
+            <h2 data-contact-text="confirmTitle">お問い合わせ内容の確認</h2>
+            <dl class="confirm-list" data-confirm-list></dl>
+            <div class="captcha-wrap">
+              <div class="h-captcha" data-captcha="true"></div>
+              <p class="field-error" data-error-for="captcha"></p>
+            </div>
+            <div class="form-actions">
+              <button class="secondary-link form-button" type="button" data-edit-button data-contact-text="editButton">修正する</button>
+              <button class="primary-link form-button" type="submit" data-submit-button data-contact-text="submitButton">送信する</button>
+            </div>
+          </div>
+
+          <div class="form-success is-hidden" data-form-success>
+            <h2 data-contact-text="successTitle">お問い合わせありがとうございます。</h2>
+            <p data-contact-text="successBody">お問い合わせを受け付けました。内容を確認のうえ、担当者よりご連絡いたします。</p>
+            <a class="primary-link" href="/" data-contact-text="successButton">ホームへ戻る</a>
+          </div>
+        </form>
+
       </section>
     </main>
     <footer class="site-footer"><p>Copyright © 2019 FJS International. All Rights Reserved.</p></footer>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="floating-menu" aria-label="Open menu"><span></span><span></span><span></span></button>
-    <nav class="floating-menu" id="floating-menu" aria-label="Primary navigation"><a href="/" data-page-link="home" data-i18n="menuHome">ホーム</a><a href="/company/" data-page-link="company" data-i18n="menuCompany">会社概要</a><a href="/products/" data-page-link="products" data-i18n="menuProducts">製品案内</a><a href="/news/" data-page-link="news" data-i18n="menuNews">お知らせ</a><a href="/clients/" data-page-link="clients" data-i18n="menuClients">主要取引先</a><a href="/contact/" data-page-link="contact" data-i18n="menuContact">お問い合わせ</a></nav>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     <script src="/app.js"></script>
+    <script src="/contact-form.js"></script>
   </body>
 </html>
-

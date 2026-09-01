@@ -17,9 +17,9 @@
         <div class="contact-form-heading">
           <p class="eyebrow" data-i18n="contactKicker">Contact</p>
           <h1 data-i18n="contactTitle">お問い合わせ</h1>
-          <p data-i18n="contactLead">商品についてのご質問、OEM・ODM、ブランドとの協業、お取引に関するご相談など、お気軽にお問い合わせください。</p>
-          <p data-i18n="contactNote">お問い合わせ内容によっては、ご回答までにお時間をいただく場合がございます。あらかじめご了承ください。</p>
-          <p class="required-note" data-i18n="contactRequiredNote">「必須」と表示されている項目は必ずご入力ください。</p>
+          <p data-i18n="contactLead" data-contact-text="contactLead">商品についてのご質問、OEM・ODM、ブランドとの協業、お取引に関するご相談など、お気軽にお問い合わせください。</p>
+          <p data-i18n="contactNote" data-contact-text="contactNote">お問い合わせ内容によっては、ご回答までにお時間をいただく場合がございます。あらかじめご了承ください。</p>
+          <p class="required-note" data-i18n="contactRequiredNote" data-contact-text="contactRequiredNote">「必須」と表示されている項目は必ずご入力ください。</p>
         </div>
 
         <form class="inquiry-form" id="inquiry-form" novalidate>
@@ -106,7 +106,7 @@
             </div>
           </div>
 
-          <div class="form-confirm-step is-hidden" data-form-step="confirm" aria-live="polite">
+          <div class="form-confirm-step is-hidden" data-form-step="confirm" aria-live="polite" hidden>
             <h2 data-contact-text="confirmTitle">お問い合わせ内容の確認</h2>
             <dl class="confirm-list" data-confirm-list></dl>
             <div class="captcha-wrap">
@@ -119,7 +119,7 @@
             </div>
           </div>
 
-          <div class="form-success is-hidden" data-form-success>
+          <div class="form-success is-hidden" data-form-success hidden>
             <h2 data-contact-text="successTitle">お問い合わせありがとうございます。</h2>
             <p data-contact-text="successBody">お問い合わせを受け付けました。内容を確認のうえ、担当者よりご連絡いたします。</p>
             <a class="primary-link" href="/" data-contact-text="successButton">ホームへ戻る</a>

@@ -24,6 +24,9 @@ const contactCopy = {
     successTitle: "お問い合わせありがとうございます。",
     successBody: "お問い合わせを受け付けました。内容を確認のうえ、担当者よりご連絡いたします。",
     successButton: "ホームへ戻る",
+    contactLead: "商品についてのご質問、OEM・ODM、ブランドとの協業、お取引に関するご相談など、お気軽にお問い合わせください。",
+    contactNote: "お問い合わせ内容によっては、ご回答までにお時間をいただく場合がございます。あらかじめご了承ください。",
+    contactRequiredNote: "「必須」と表示されている項目は必ずご入力ください。",
     errorSubmit: "送信中にエラーが発生しました。お手数ですが、しばらくしてから再度お試しください。",
     errorRequired: "必須項目です。",
     errorEmail: "正しいメールアドレスを入力してください。",
@@ -59,6 +62,9 @@ const contactCopy = {
     successTitle: "Thank you for your inquiry.",
     successBody: "Your inquiry has been received. Our team will review your message and contact you shortly.",
     successButton: "Back to Home",
+    contactLead: "Please feel free to contact us regarding products, OEM/ODM projects, brand collaboration, or other business inquiries.",
+    contactNote: "Depending on the nature of your inquiry, it may take some time for us to respond. Thank you for your understanding.",
+    contactRequiredNote: "Fields marked “Required” must be completed.",
     errorSubmit: "An error occurred while sending your inquiry. Please try again later.",
     errorRequired: "This field is required.",
     errorEmail: "Please enter a valid email address.",
@@ -129,6 +135,11 @@ function setupContactForm() {
     const node = form.querySelector(`[data-error-for="${name}"]`);
     if (!node) return;
     node.textContent = message;
+  }
+
+  function setHidden(node, hidden) {
+    node.classList.toggle("is-hidden", hidden);
+    node.hidden = hidden;
   }
 
   function clearErrors() {
@@ -244,14 +255,14 @@ function setupContactForm() {
   form.querySelector("[data-review-button]").addEventListener("click", () => {
     if (!validate()) return;
     renderConfirmation();
-    inputStep.classList.add("is-hidden");
-    confirmStep.classList.remove("is-hidden");
+    setHidden(inputStep, true);
+    setHidden(confirmStep, false);
     confirmStep.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 
   form.querySelector("[data-edit-button]").addEventListener("click", () => {
-    confirmStep.classList.add("is-hidden");
-    inputStep.classList.remove("is-hidden");
+    setHidden(confirmStep, true);
+    setHidden(inputStep, false);
     inputStep.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 
@@ -274,8 +285,8 @@ function setupContactForm() {
       const result = await response.json();
       if (!response.ok || !result.success) throw new Error(result.message || "Submission failed");
 
-      confirmStep.classList.add("is-hidden");
-      successStep.classList.remove("is-hidden");
+      setHidden(confirmStep, true);
+      setHidden(successStep, false);
       status.textContent = "";
       form.reset();
       successStep.scrollIntoView({ behavior: "smooth", block: "start" });

@@ -30,6 +30,11 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+function renderNewsTitle(value) {
+  const title = String(value || "").replace(/^●\s*/, "");
+  return `<span class="news-title-dot" aria-hidden="true"></span><span>${escapeHtml(title)}</span>`;
+}
+
 function formatDate(value, lang) {
   const date = new Date(`${value}T00:00:00`);
   if (Number.isNaN(date.getTime())) return value;
@@ -45,6 +50,15 @@ function renderBody(text) {
     .split(/\n{2,}/)
     .map((paragraph) => `<p>${paragraph.replace(/\n/g, "<br>")}</p>`)
     .join("");
+}
+
+function renderCover(post) {
+  if (!post.cover) return "";
+  return `
+    <div class="news-cover">
+      <img src="${escapeHtml(post.cover)}" alt="">
+    </div>
+  `;
 }
 
 async function loadPosts() {
@@ -69,62 +83,25 @@ async function renderNewsList() {
   }
 
   container.innerHTML = posts.map((post) => `
-    <article class="news-card">
-      <a class="news-cover" href="post.html?id=${encodeURIComponent(post.id)}" aria-label="${escapeHtml(pick(post.title, lang))}">
-        <img src="${escapeHtml(post.cover || "assets/home-hero-lifestyle.png")}" alt="">
-      </a>
+    <article class="news-card news-card-single">
+      ${renderCover(post)}
       <div class="news-card-body">
         <div class="news-meta">
           <time datetime="${escapeHtml(post.date)}">${escapeHtml(formatDate(post.date, lang))}</time>
           <span>${escapeHtml(pick(post.category, lang))}</span>
         </div>
-        <h2><a href="post.html?id=${encodeURIComponent(post.id)}">${escapeHtml(pick(post.title, lang))}</a></h2>
-        <p>${escapeHtml(pick(post.excerpt, lang))}</p>
+        <h2>${renderNewsTitle(pick(post.title, lang))}</h2>
+        <div class="news-full-body">${renderBody(pick(post.body, lang) || pick(post.excerpt, lang))}</div>
       </div>
     </article>
   `).join("");
 }
 
-async function renderPostDetail() {
-  const container = document.querySelector("#post-detail");
-  if (!container) return;
-  const lang = currentLang();
-  const id = new URLSearchParams(window.location.search).get("id");
-  const posts = await loadPosts();
-  const post = posts.find((entry) => entry.id === id) || posts[0];
-
-  if (!post) {
-    container.innerHTML = `<div class="content-panel"><p>${lang === "ja" ? "記事が見つかりません。" : "Post not found."}</p></div>`;
-    return;
-  }
-
-  document.title = `${pick(post.title, lang)} | FJSインターナショナル株式会社`;
-  const coverMarkup = post.cover
-    ? `<img class="post-cover" src="${escapeHtml(post.cover)}" alt="">`
-    : "";
-
-  container.innerHTML = `
-    <a class="back-link" href="news.html">${lang === "ja" ? "お知らせ一覧へ" : "Back to News"}</a>
-    <div class="post-article">
-      <div class="post-article-header">
-        <div class="news-meta">
-          <time datetime="${escapeHtml(post.date)}">${escapeHtml(formatDate(post.date, lang))}</time>
-          <span>${escapeHtml(pick(post.category, lang))}</span>
-        </div>
-        <h1>${escapeHtml(pick(post.title, lang))}</h1>
-        <p>${escapeHtml(pick(post.excerpt, lang))}</p>
-      </div>
-      ${coverMarkup}
-      <div class="post-body">${renderBody(pick(post.body, lang))}</div>
-    </div>
-  `;
-}
-
 async function renderNews() {
   try {
-    await Promise.all([renderNewsList(), renderPostDetail()]);
+    await renderNewsList();
   } catch (error) {
-    const target = document.querySelector("#news-list, #post-detail");
+    const target = document.querySelector("#news-list");
     if (target) target.innerHTML = `<div class="content-panel"><p>News content could not be loaded.</p></div>`;
   }
 }

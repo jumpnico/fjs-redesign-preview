@@ -3,6 +3,13 @@ const translations = {
     menuHome: "ホーム",
     menuCompany: "会社概要",
     menuProducts: "製品案内",
+    menuService: "事業案内",
+    menuAccess: "アクセス",
+    serviceCollaboration: "コラボレーション",
+    serviceProductDevelopment: "自社製品開発",
+    serviceOem: "OEM / ODM事業",
+    serviceOnlineShop: "オンラインショップ運営",
+    menuLabel: "MENU",
     menuNews: "お知らせ",
     menuClients: "主要取引先",
     menuContact: "お問い合わせ",
@@ -19,8 +26,10 @@ const translations = {
     heroSlide4Title: "FJS楽天市場店で販売中。",
     heroSlide4Lead: "寝具、生活雑貨、防災・食品など、一部商品は楽天市場店でもご覧いただけます。",
     heroRakutenLink: "楽天市場店を見る",
-    homeCtaProducts: "製品を見る",
-    homeCtaCompany: "会社を知る",
+    homeHeroTitle: "多様なニーズに応える商品とサービスを通じて、\n豊かな未来づくりに貢献します。",
+    homeHeroLead: "海外への展開、輸出入、販売代理・販路開拓まで、\n日本と世界を結ぶビジネスパートナーとして、\nブランドの新たな可能性を創造します。",
+    homeCtaProducts: "事業案内を見る",
+    homeCtaCompany: "お問い合わせ",
     homeIntroKicker: "Our Focus",
     homeIntroTitle: "価格、品質、デザイン。そのちょうどよいバランスを探し続けます。",
     homeIntroBody: "お客様の期待を超える製品を、よりお求めやすく。FJSインターナショナルは、消費者ニーズを見つめながら、心をこめた“よきモノづくり”で豊かな暮らしをご提案します。",
@@ -33,14 +42,55 @@ const translations = {
     homeCtaKicker: "Contact",
     homeCtaTitle: "製品、販売店、OEM生産についてお気軽にご相談ください。",
     homeCtaContact: "お問い合わせへ",
+    businessKicker: "Our Business",
+    businessTitle: "事業案内",
+    businessLead: "商品企画・開発を軸に、ブランドとのコラボレーション、OEM・ODM、オンラインショップ運営など、さまざまな事業を展開しています。",
+    latestNewsTitle: "お知らせ",
+    latestNewsLink: "お知らせ一覧を見る",
+    homeCompanyTitle: "FJSインターナショナルについて",
+    homeCompanyBody: "FJSインターナショナル株式会社は、インテリア製品、寝具、生活雑貨、食品など、暮らしに関わる幅広い商品を取り扱っています。商品企画・開発、ブランドとの協業、OEM・ODM、オンライン販売などを通じて、市場のニーズに応える商品とサービスを提供しています。",
+    homeCompanyLink: "会社概要を見る",
+    serviceKicker: "Service",
+    serviceTitle: "事業案内",
+    serviceLead: "FJSインターナショナルでは、商品企画・開発を軸に、ブランドとのコラボレーション、OEM・ODM、オンラインショップ運営など、さまざまな事業を展開しています。",
+    collaborationTitle: "コラボレーション",
+    collaborationLead: "国内外のメーカー・ブランドと連携し、それぞれの魅力を活かした商品展開に取り組んでいます。",
+    comingSoon: "coming soon",
+    collaborationDouhuangjinBody: "豆黄金 × FJS\n中国で愛される豆のおいしさを、日本の新しい食文化へ。\n豆黄金は、中国の多くの飲食店でも採用されている豆製品ブランドです。\n長年培ってきた製造技術と、原料への徹底したこだわり。\nそして、「本当においしい豆製品を届けたい」という想い。\nFJSは豆黄金の輸入代理店として、豆黄金が生み出す新しい豆のおいしさを、日本の皆様へお届けしてまいります。",
+    collaborationUruoiBody: "毎日のティシューに、＋うるおい。\n\n贅沢な3枚重ね × 3つの保湿成分\n触れた瞬間にわかる、しっとりとしたやさしさ。\n\nFJS ORIGINAL BRAND",
+    collaborationMatchaBody: "MATCHA × FRUITS\n日本の抹茶に、フルーツという新発想。\n苺・シャインマスカット・レモンの3つのフレーバーで、伝統ある抹茶をもっと気軽に、もっと自由に楽しめる新しいスタイルをご提案します。\nFJSは日本国内での販売に加え、販売代理店として東南アジア市場への展開も行っています。\n日本で生まれた新しい抹茶のおいしさを、日本からアジアへ。\n東南アジアでの販売・お取引に関するお問い合わせ\nFJSでは、フルーツ抹茶の東南アジア市場における販売・お取引に関するお問い合わせを受け付けております。卸売、小売、飲食店、EC等でのお取り扱いをご検討の企業様は、FJSまでお問い合わせください。",
+    collaborationLavaBitesBody: "unico Lava Bites × FJS\n世界のおいしさに、新しい出会いを。\nサクッと香ばしいクッキーに、なめらかなフィリングを包み込んだ「unico Lava Bites」。4つの個性豊かなフレーバーが、いつものひとときを少し特別に。\nFJSが選び、日本へ届けるインポートセレクション。",
+    developmentTitle: "自社製品開発",
+    developmentLead: "市場や暮らしのニーズを捉え、幅広いカテゴリーで商品を企画・開発しています。",
+    oemPageTitle: "OEM / ODM事業",
+    oemPageLead: "商品企画から製品化まで、お客様のニーズに合わせたものづくりをサポートします。",
+    oemStepPlanningTitle: "商品企画",
+    oemStepPlanningBody: "コンセプトや用途、ターゲットなどを踏まえ、商品化に向けた企画を検討します。",
+    oemStepDevelopmentTitle: "開発・調整",
+    oemStepDevelopmentBody: "ご要望に応じて、仕様やサンプルなどを確認しながら製品化に向けた調整を行います。",
+    oemStepSupportTitle: "製品化サポート",
+    oemStepSupportBody: "企画内容や商品の特性に合わせ、製品化に必要な各工程をサポートします。",
+    oemCtaTitle: "OEM・ODMに関するご相談は、お気軽にお問い合わせください。",
+    onlineShopTitle: "オンラインショップ運営",
+    onlineShopLead: "オンラインショップの運営を通じて、商品をお客様へ直接届ける販売チャネルを展開しています。",
+    rakutenStoreTitle: "FJS楽天市場店",
+    rakutenStoreLead: "FJSインターナショナルの商品を楽天市場でもご覧いただけます。",
+    contactButton: "お問い合わせ",
+    accessKicker: "Access",
+    accessTitle: "アクセス",
+    accessLead: "FJSインターナショナル株式会社 本社へのアクセスをご案内します。",
+    accessAddress: "〒103-0013\n東京都中央区日本橋人形町2-6-7\nSIL人形町ビル 11F",
+    accessTrain1: "東京メトロ日比谷線・都営浅草線 人形町駅 A3出口より徒歩約1分",
+    accessTrain2: "東京メトロ半蔵門線 水天宮前駅より徒歩約5分",
     companyKicker: "Company",
     companyTitle: "会社概要",
     companyLead: "FJSインターナショナル株式会社は、心をこめた“よきモノづくり”を通じて、豊かな暮らしをご提案することを第一に考えております。",
+    companyIntro: "FJSインターナショナル株式会社は、心をこめた“よきモノづくり”を通じて、豊かな暮らしをご提案することを第一に考えております。インテリア製品、寝具、雑貨類、食品など、暮らしに関わる幅広い商品を取り扱い、全国の量販店、ホームセンター等への販売を通じて、日々の生活に取り入れやすい商品をご提案します。",
     companyBody: "FJSインターナショナル株式会社は、インテリア製品、寝具、雑貨類、食品など、暮らしに関わる幅広い商品を取り扱っています。全国の量販店、ホームセンター等への販売を通じて、日々の生活に取り入れやすい商品をご提案します。",
     companyNameLabel: "商号",
     companyName: "FJSインターナショナル株式会社",
     addressLabel: "本社所在地",
-    address: "東京都中央区日本橋大伝馬町11-10",
+    address: "〒103-0013 東京都中央区日本橋人形町2-6-7 SIL人形町ビル 11F",
     foundedLabel: "創業・設立",
     founded: "2019年",
     capitalLabel: "資本金",
@@ -52,7 +102,7 @@ const translations = {
     salesChannelsLabel: "主要販売先",
     salesChannels: "全国の量販店 ホームセンター等",
     affiliateLabel: "関連会社",
-    affiliate: "フジスター株式会社",
+    affiliate: "フジスター株式会社\nNICO SG PTE. LTD.",
     productsKicker: "Products",
     productsTitle: "製品案内",
     productsLead: "寝具・インテリア、生活雑貨、食品、防災用品からOEM・ODMまで、暮らしに近いカテゴリーを幅広く扱っています。",
@@ -109,12 +159,19 @@ const translations = {
     contactPhoneTitle: "お電話でのお問い合わせ",
     contactEmailTitle: "メールでのお問い合わせ",
     contactAccessTitle: "所在地",
-    contactAddress: "東京都中央区人形町2-6-7 SIL人形町11階"
+    contactAddress: "〒103-0013 東京都中央区日本橋人形町2-6-7 SIL人形町ビル 11F"
   },
   en: {
     menuHome: "Home",
     menuCompany: "Company",
     menuProducts: "Products",
+    menuService: "Service",
+    menuAccess: "Access",
+    serviceCollaboration: "Collaboration",
+    serviceProductDevelopment: "In-house Product Development",
+    serviceOem: "OEM / ODM",
+    serviceOnlineShop: "Online Shop Operations",
+    menuLabel: "MENU",
     menuNews: "News",
     menuClients: "Clients",
     menuContact: "Contact",
@@ -131,8 +188,10 @@ const translations = {
     heroSlide4Title: "Available at FJS Rakuten Store.",
     heroSlide4Lead: "Selected bedding, household goods, disaster-preparedness items, and food products are available through our Rakuten store.",
     heroRakutenLink: "View Rakuten Store",
-    homeCtaProducts: "View products",
-    homeCtaCompany: "About company",
+    homeHeroTitle: "Through products and services that respond to diverse needs,\nwe contribute to building a richer future.",
+    homeHeroLead: "From overseas expansion, import and export, to sales agency and market development,\nwe connect Japan and the world as a business partner,\ncreating new possibilities for brands.",
+    homeCtaProducts: "Our Business",
+    homeCtaCompany: "Contact Us",
     homeIntroKicker: "Our Focus",
     homeIntroTitle: "We keep searching for the right balance of price, quality, and design.",
     homeIntroBody: "We aim to deliver products that exceed customer expectations while remaining accessible. Through sincere manufacturing and a close eye on consumer needs, FJS International proposes richer everyday living.",
@@ -145,14 +204,55 @@ const translations = {
     homeCtaKicker: "Contact",
     homeCtaTitle: "Please contact us about products, retailers, bulk purchase, or OEM production.",
     homeCtaContact: "Go to contact",
+    businessKicker: "Our Business",
+    businessTitle: "What We Do",
+    businessLead: "FJS International operates across a range of business areas centered on product planning and development, including brand collaboration, OEM/ODM, and online shop operations.",
+    latestNewsTitle: "Latest Updates",
+    latestNewsLink: "View All News",
+    homeCompanyTitle: "About FJS International",
+    homeCompanyBody: "FJS International Co., Ltd. handles a broad range of products related to everyday living, including interior products, bedding, lifestyle goods, and food. Through product planning and development, brand collaboration, OEM/ODM, and online sales, we provide products and services that respond to evolving market needs.",
+    homeCompanyLink: "About Our Company",
+    serviceKicker: "Service",
+    serviceTitle: "Our Business",
+    serviceLead: "FJS International operates across a range of business areas centered on product planning and development, including brand collaboration, OEM/ODM, and online shop operations.",
+    collaborationTitle: "Brand Collaboration",
+    collaborationLead: "We work with selected manufacturers and brands to develop opportunities that bring their products and strengths to the market.",
+    comingSoon: "coming soon",
+    collaborationDouhuangjinBody: "Douhuangjin × FJS\nBringing the bean products loved in China to a new food culture in Japan.\nDouhuangjin is a bean product brand adopted by many restaurants in China.\nWith years of manufacturing expertise, careful ingredient selection, and a desire to deliver truly delicious bean products, FJS serves as the import agent for Douhuangjin and brings its new bean-based flavors to customers in Japan.",
+    collaborationUruoiBody: "Add moisture to everyday tissues.\n\nPremium three-ply tissue × three moisturizing ingredients.\nA soft, moist feel you can notice from the first touch.\n\nFJS ORIGINAL BRAND",
+    collaborationMatchaBody: "MATCHA × FRUITS\nA fresh idea that brings fruit together with Japanese matcha.\nWith strawberry, Shine Muscat, and lemon flavors, this new style makes traditional matcha easier and freer to enjoy.\nIn addition to domestic sales in Japan, FJS also supports expansion into Southeast Asia as a sales agent.\nFrom Japan to Asia, we share a new way to enjoy matcha.\nFor sales and business inquiries in Southeast Asia, FJS accepts inquiries from companies considering wholesale, retail, restaurant, or e-commerce distribution of fruit matcha.",
+    collaborationLavaBitesBody: "unico Lava Bites × FJS\nA new encounter with flavors from around the world.\nUnico Lava Bites wrap smooth filling inside crisp, fragrant cookies. Four distinctive flavors make everyday moments feel a little more special.\nAn imported selection chosen by FJS and delivered to Japan.",
+    developmentTitle: "In-house Product Development",
+    developmentLead: "We plan and develop products across a wide range of categories with a focus on changing market and lifestyle needs.",
+    oemPageTitle: "OEM / ODM Services",
+    oemPageLead: "We support product development from planning through commercialization, based on each customer's individual requirements.",
+    oemStepPlanningTitle: "Product Planning",
+    oemStepPlanningBody: "We consider concepts, use cases, target users, and other requirements to shape products for commercialization.",
+    oemStepDevelopmentTitle: "Development and Adjustment",
+    oemStepDevelopmentBody: "We review specifications and samples based on your requests, then adjust details toward production.",
+    oemStepSupportTitle: "Commercialization Support",
+    oemStepSupportBody: "We support the necessary steps for commercialization according to the plan and product characteristics.",
+    oemCtaTitle: "Please contact us for OEM and ODM consultations.",
+    onlineShopTitle: "Online Shop Operations",
+    onlineShopLead: "Through our online shop operations, we maintain a direct sales channel connecting products with customers.",
+    rakutenStoreTitle: "FJS Rakuten Store",
+    rakutenStoreLead: "FJS International products are also available through our Rakuten store.",
+    contactButton: "Contact Us",
+    accessKicker: "Access",
+    accessTitle: "Access",
+    accessLead: "Access information for the FJS International head office.",
+    accessAddress: "SIL NINGYO-CHO BUILDING 11F\n2-6-7 NIHONBASHI NINGYO-CHO, CHUO-KU\nTOKYO 103-0013, JAPAN",
+    accessTrain1: "Tokyo Metro Hibiya Line / Toei Asakusa Line: approximately 1 minute on foot from Ningyocho Station Exit A3.",
+    accessTrain2: "Tokyo Metro Hanzomon Line: approximately 5 minutes on foot from Suitengumae Station.",
     companyKicker: "Company",
     companyTitle: "Company Profile",
     companyLead: "FJS International focuses on sincere manufacturing and products that support richer everyday living.",
+    companyIntro: "FJS International focuses on sincere manufacturing and products that support richer everyday living. We handle a broad range of everyday products, including interior goods, bedding, household goods, and food products, and propose items that are easy to bring into daily life through sales to mass retailers, home centers, and related channels across Japan.",
     companyBody: "FJS International handles a broad range of everyday products, including interior goods, bedding, household goods, and food products. Through sales to mass retailers, home centers, and related channels across Japan, we propose products that are easy to bring into daily life.",
     companyNameLabel: "Company name",
     companyName: "FJS International Co., Ltd.",
     addressLabel: "Head office",
-    address: "11-10 Nihonbashi Odenmacho, Chuo-ku, Tokyo",
+    address: "SIL NINGYO-CHO BUILDING 11F, 2-6-7 NIHONBASHI NINGYO-CHO, CHUO-KU, TOKYO 103-0013, JAPAN",
     foundedLabel: "Founded / Established",
     founded: "2019",
     capitalLabel: "Capital",
@@ -164,7 +264,7 @@ const translations = {
     salesChannelsLabel: "Main sales channels",
     salesChannels: "Mass retailers, home centers, and related channels across Japan",
     affiliateLabel: "Affiliated company",
-    affiliate: "Fujistar Co., Ltd.",
+    affiliate: "Fujistar Co., Ltd.\nNICO SG PTE. LTD.",
     productsKicker: "Products",
     productsTitle: "Products",
     productsLead: "We handle categories close to daily life, from bedding, interiors, household goods, food, and disaster-preparedness items to OEM and ODM.",
@@ -221,23 +321,113 @@ const translations = {
     contactPhoneTitle: "Contact by phone",
     contactEmailTitle: "Contact by email",
     contactAccessTitle: "Address",
-    contactAddress: "SIL Ningyocho 11F, 2-6-7 Ningyocho, Chuo-ku, Tokyo"
+    contactAddress: "SIL NINGYO-CHO BUILDING 11F, 2-6-7 NIHONBASHI NINGYO-CHO, CHUO-KU, TOKYO 103-0013, JAPAN"
   }
 };
 
-const menuButton = document.querySelector(".menu-toggle");
-const menu = document.querySelector(".floating-menu");
-const languageButtons = document.querySelectorAll("[data-lang-option]");
-const translatedNodes = document.querySelectorAll("[data-i18n]");
 const page = document.body.dataset.page;
 let currentHeroSlide = 0;
 let heroTimer;
 
-document.querySelector(`[data-page-link="${page}"]`)?.classList.add("is-active");
+const serviceLinks = [
+  { href: "collaboration.html", key: "serviceCollaboration", page: "collaboration" },
+  { href: "product-development.html", key: "serviceProductDevelopment", page: "product-development" },
+  { href: "oem-odm.html", key: "serviceOem", page: "oem-odm" },
+  { href: "online-shop.html", key: "serviceOnlineShop", page: "online-shop" }
+];
+
+const primaryLinks = [
+  { href: "news.html", key: "menuNews", page: "news" },
+  { href: "company.html", key: "menuCompany", page: "company" },
+  { href: "service.html", key: "menuService", page: "service", children: serviceLinks },
+  { href: "contact.html", key: "menuContact", page: "contact" },
+  { href: "access.html", key: "menuAccess", page: "access" }
+];
+
+function linkText(key, lang = document.documentElement.lang || "ja") {
+  return translations[lang]?.[key] || translations.ja[key] || key;
+}
+
+function isCurrentLink(item) {
+  return item.page === page || item.children?.some((child) => child.page === page);
+}
+
+function renderServiceChildren(className = "") {
+  return serviceLinks.map((child) => `
+    <a class="${className}" href="${child.href}" data-page-link="${child.page}" data-i18n="${child.key}">${linkText(child.key)}</a>
+  `).join("");
+}
+
+function initGlobalChrome() {
+  const header = document.querySelector(".site-header");
+  if (header) {
+    header.innerHTML = `
+      <a class="brand" href="index.html" aria-label="FJSインターナショナル株式会社">
+        <img src="assets/fjsi-logo-transparent.png" alt="FJSインターナショナル株式会社">
+      </a>
+      <div class="site-header-right">
+        <div class="language-switch" aria-label="Language switch">
+          <button class="lang-button is-active" type="button" data-lang-option="ja">日本語</button>
+          <span aria-hidden="true">/</span>
+          <button class="lang-button" type="button" data-lang-option="en">EN</button>
+        </div>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          ${primaryLinks.map((item) => item.children ? `
+            <div class="nav-item has-dropdown">
+              <a href="${item.href}" data-page-link="${item.page}" data-i18n="${item.key}">${linkText(item.key)}</a>
+              <div class="service-dropdown">${renderServiceChildren()}</div>
+            </div>
+          ` : `<a href="${item.href}" data-page-link="${item.page}" data-i18n="${item.key}">${linkText(item.key)}</a>`).join("")}
+        </nav>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="floating-menu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    `;
+  }
+
+  document.querySelectorAll("body > .menu-toggle").forEach((button) => button.remove());
+  let menu = document.querySelector(".floating-menu");
+  if (!menu) {
+    menu = document.createElement("nav");
+    menu.className = "floating-menu";
+    menu.id = "floating-menu";
+    menu.setAttribute("aria-label", "Full site navigation");
+    document.body.append(menu);
+  }
+  menu.innerHTML = `
+    <div class="floating-menu-panel">
+      ${primaryLinks.map((item) => `
+        <div class="overlay-nav-group">
+          <a href="${item.href}" data-page-link="${item.page}" data-i18n="${item.key}">${linkText(item.key)}</a>
+          ${item.children ? `<div class="overlay-subnav">${renderServiceChildren()}</div>` : ""}
+        </div>
+      `).join("")}
+    </div>
+  `;
+
+  document.querySelectorAll(`[data-page-link="${page}"]`).forEach((node) => node.classList.add("is-active"));
+
+  const footer = document.querySelector(".site-footer");
+  if (footer) {
+    footer.innerHTML = `
+      <div class="footer-inner">
+        <p><strong>FJS International Co., Ltd.</strong></p>
+        <p>〒103-0013 東京都中央区日本橋人形町2-6-7 SIL人形町ビル 11F</p>
+        <p>TEL 03-5801-9965&nbsp;&nbsp;MAIL connect@fjsi.co.jp</p>
+        <p class="footer-copy">© FJS International Co., Ltd. All Rights Reserved.</p>
+      </div>
+    `;
+  }
+}
 
 function setMenu(open) {
+  const menuButton = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".floating-menu");
+  if (!menuButton || !menu) return;
   menuButton.classList.toggle("is-open", open);
   menu.classList.toggle("is-open", open);
+  document.body.classList.toggle("menu-open", open);
   menuButton.setAttribute("aria-expanded", String(open));
   menuButton.setAttribute("aria-label", open ? "Close menu" : "Open menu");
 }
@@ -245,14 +435,80 @@ function setMenu(open) {
 function setLanguage(lang) {
   document.documentElement.lang = lang;
   localStorage.setItem("fjs-lang", lang);
-  translatedNodes.forEach((node) => {
+  document.querySelectorAll("[data-i18n]").forEach((node) => {
     const key = node.dataset.i18n;
-    if (translations[lang][key]) node.textContent = translations[lang][key];
+    if (translations[lang]?.[key]) node.textContent = translations[lang][key];
   });
-  languageButtons.forEach((button) => {
+  document.querySelectorAll("[data-i18n-rich]").forEach((node) => {
+    const key = node.dataset.i18nRich;
+    const value = translations[lang]?.[key];
+    if (!value) return;
+    node.replaceChildren(...value.split(/\n+/).map((paragraph) => paragraph.trim()).filter(Boolean).map((paragraph) => {
+      const element = document.createElement("p");
+      element.textContent = paragraph;
+      return element;
+    }));
+  });
+  document.querySelectorAll("[data-lang-option]").forEach((button) => {
     button.classList.toggle("is-active", button.dataset.langOption === lang);
   });
   window.dispatchEvent(new CustomEvent("fjs-language-change", { detail: { lang } }));
+}
+
+function pickLocalized(value, lang) {
+  if (!value) return "";
+  if (typeof value === "string") return value.trim() ? value : "";
+  return value[lang]?.trim?.() || value.ja?.trim?.() || value.en?.trim?.() || "";
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function renderNewsTitle(value) {
+  const title = String(value || "").replace(/^●\s*/, "");
+  return `<span class="news-title-dot" aria-hidden="true"></span><span>${escapeHtml(title)}</span>`;
+}
+
+function formatDate(value, lang) {
+  const date = new Date(`${value}T00:00:00`);
+  if (Number.isNaN(date.getTime())) return value;
+  return new Intl.DateTimeFormat(lang === "ja" ? "ja-JP" : "en-US", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).format(date);
+}
+
+async function setupHomeNews() {
+  const container = document.querySelector("[data-home-news]");
+  if (!container) return;
+  const lang = document.documentElement.lang || "ja";
+  try {
+    const response = await fetch("data/posts.json", { cache: "no-store" });
+    const data = await response.json();
+    const posts = (data.posts || [])
+      .filter((post) => post.status !== "draft")
+      .sort((a, b) => String(b.date).localeCompare(String(a.date)))
+      .slice(0, 3);
+    container.innerHTML = posts.map((post) => `
+      <article class="mini-news-card">
+        <img src="${escapeHtml(post.cover || "assets/home-hero-lifestyle.png")}" alt="">
+        <div>
+          <time datetime="${escapeHtml(post.date)}">${escapeHtml(formatDate(post.date, lang))}</time>
+          <h3>${renderNewsTitle(pickLocalized(post.title, lang))}</h3>
+          <p>${escapeHtml(pickLocalized(post.excerpt, lang) || pickLocalized(post.body, lang))}</p>
+        </div>
+      </article>
+    `).join("");
+  } catch (error) {
+    container.innerHTML = "";
+  }
 }
 
 function setupHeroSlider() {
@@ -344,12 +600,20 @@ function setupProductModal() {
   });
 }
 
-menuButton.addEventListener("click", () => setMenu(!menu.classList.contains("is-open")));
-menu.addEventListener("click", (event) => {
+initGlobalChrome();
+
+document.querySelector(".menu-toggle")?.addEventListener("click", () => {
+  const menu = document.querySelector(".floating-menu");
+  setMenu(!menu?.classList.contains("is-open"));
+});
+document.querySelector(".floating-menu")?.addEventListener("click", (event) => {
   if (event.target.matches("a")) setMenu(false);
 });
-languageButtons.forEach((button) => {
-  button.addEventListener("click", () => setLanguage(button.dataset.langOption));
+document.querySelectorAll("[data-lang-option]").forEach((button) => {
+  button.addEventListener("click", () => {
+    setLanguage(button.dataset.langOption);
+    setupHomeNews();
+  });
 });
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") setMenu(false);
@@ -358,3 +622,4 @@ document.addEventListener("keydown", (event) => {
 setLanguage(localStorage.getItem("fjs-lang") || "ja");
 setupHeroSlider();
 setupProductModal();
+setupHomeNews();

@@ -9,80 +9,73 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body data-page="home">
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="FJSインターナショナル株式会社">
-        <img src="assets/fjsi-logo-transparent.png" alt="FJSインターナショナル株式会社">
-      </a>
-      <div class="language-switch" aria-label="Language switch">
-        <button class="lang-button is-active" type="button" data-lang-option="ja">JP</button>
-        <button class="lang-button" type="button" data-lang-option="en">EN</button>
-      </div>
-    </header>
+    <header class="site-header"></header>
 
     <main>
-      <section class="home-hero hero-slider" aria-label="FJS highlights">
-        <div class="hero-track" data-hero-track>
-          <article class="hero-slide is-active" style="background-image: linear-gradient(90deg, rgba(21, 27, 29, 0.74), rgba(21, 27, 29, 0.38), rgba(21, 27, 29, 0.12)), url('assets/home-hero-lifestyle.png');">
-            <div class="hero-panel">
-              <p class="eyebrow" data-i18n="heroSlide1Kicker">Lifestyle Products</p>
-              <h1 data-i18n="heroSlide1Title">暮らしに寄り添う商品づくり。</h1>
-              <p data-i18n="heroSlide1Lead">寝具・インテリア・生活用品を中心に、日々の暮らしへ自然に取り入れられる品質を提案します。</p>
-            </div>
-          </article>
-          <article class="hero-slide" style="background-image: linear-gradient(90deg, rgba(21, 27, 29, 0.72), rgba(21, 27, 29, 0.34), rgba(21, 27, 29, 0.08)), url('assets/hero-seasonal-needs.png');">
-            <div class="hero-panel">
-              <p class="eyebrow" data-i18n="heroSlide2Kicker">Seasonal Needs</p>
-              <h1 data-i18n="heroSlide2Title">季節とニーズに合わせた企画。</h1>
-              <p data-i18n="heroSlide2Lead">暑さ対策、防災、アウトドアなど、生活シーンの変化に合わせて商品を企画します。</p>
-            </div>
-          </article>
-          <article class="hero-slide" style="background-image: linear-gradient(90deg, rgba(21, 27, 29, 0.74), rgba(21, 27, 29, 0.42), rgba(21, 27, 29, 0.12)), url('assets/hero-oem-odm.png');">
-            <div class="hero-panel">
-              <p class="eyebrow" data-i18n="heroSlide3Kicker">OEM / ODM</p>
-              <h1 data-i18n="heroSlide3Title">小売販売からOEM・ODMまで。</h1>
-              <p data-i18n="heroSlide3Lead">販売実績と生産背景を活かし、ブランドや販売計画に合わせた製品づくりをサポートします。</p>
-            </div>
-          </article>
-          <article class="hero-slide hero-slide-rakuten" style="background-image: linear-gradient(90deg, rgba(21, 27, 29, 0.76), rgba(21, 27, 29, 0.44), rgba(21, 27, 29, 0.18)), url('assets/hero-rakuten-store.png');">
-            <div class="hero-panel">
-              <p class="eyebrow" data-i18n="heroSlide4Kicker">Rakuten Store</p>
-              <h1 data-i18n="heroSlide4Title">FJS楽天市場店で販売中。</h1>
-              <p data-i18n="heroSlide4Lead">寝具、生活雑貨、防災・食品など、一部商品は楽天市場店でもご覧いただけます。</p>
-              <a class="hero-link" href="https://www.rakuten.co.jp/fjsi/" target="_blank" rel="noopener" data-i18n="heroRakutenLink">楽天市場店を見る</a>
-            </div>
-          </article>
-        </div>
-        <div class="hero-slider-controls" aria-label="Slider controls">
-          <button type="button" class="hero-arrow" data-hero-prev aria-label="Previous slide">‹</button>
-          <div class="hero-dots" data-hero-dots aria-label="Slide position"></div>
-          <button type="button" class="hero-arrow" data-hero-next aria-label="Next slide">›</button>
+      <section class="home-hero single-hero home-hero-final" style="--hero-image: url('assets/home-hero-global.png'); background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.72) 34%, rgba(255, 255, 255, 0.18) 58%, rgba(255, 255, 255, 0) 74%), var(--hero-image);">
+        <div class="hero-panel">
+          <h1 data-i18n="homeHeroTitle">多様なニーズに応える商品とサービスを通じて、
+豊かな未来づくりに貢献します。</h1>
+          <span class="hero-divider" aria-hidden="true"></span>
+          <p data-i18n="homeHeroLead">海外への展開、輸出入、販売代理・販路開拓まで、
+日本と世界を結ぶビジネスパートナーとして、
+ブランドの新たな可能性を創造します。</p>
+          <div class="hero-actions">
+            <a class="primary-link" href="service.html" data-i18n="homeCtaProducts">事業案内を見る</a>
+          </div>
         </div>
       </section>
 
-      <section class="section home-intro">
-        <div>
-          <p class="section-kicker" data-i18n="homeIntroKicker">Our Focus</p>
-          <h2 data-i18n="homeIntroTitle">価格、品質、デザイン。そのちょうどよいバランスを探し続けます。</h2>
-        </div>
-        <p data-i18n="homeIntroBody">お客様の期待を超える製品を、よりお求めやすく。FJSインターナショナルは、消費者ニーズを見つめながら、心をこめた“よきモノづくり”で豊かな暮らしをご提案します。</p>
+      <section class="section section-heading">
+        <p class="section-kicker" data-i18n="businessKicker">Our Business</p>
+        <h2 data-i18n="businessTitle">事業案内</h2>
+        <p data-i18n="businessLead">商品企画・開発を軸に、ブランドとのコラボレーション、OEM・ODM、オンラインショップ運営など、さまざまな事業を展開しています。</p>
       </section>
 
-      <section class="section feature-grid" aria-label="Company strengths">
-        <article class="feature-card">
+      <section class="section business-grid" aria-label="Business areas">
+        <a class="business-card" href="collaboration.html" style="--card-image: url('assets/home-hero-approved.png');">
           <span>01</span>
-          <h2 data-i18n="featureDesignTitle">自社企画</h2>
+          <h3 data-i18n="serviceCollaboration">コラボレーション</h3>
           <p data-i18n="featureDesignBody">暮らしの中で使いやすく、店頭でも選ばれやすいインテリア製品を企画します。</p>
-        </article>
-        <article class="feature-card">
+          <strong>VIEW MORE</strong>
+        </a>
+        <a class="business-card" href="product-development.html" style="--card-image: url('assets/home-hero-lifestyle.png');">
           <span>02</span>
-          <h2 data-i18n="featureNetworkTitle">生産背景</h2>
+          <h3 data-i18n="serviceProductDevelopment">自社製品開発</h3>
           <p data-i18n="featureNetworkBody">フロアマット、寝具、雑貨など幅広いカテゴリーで、品質と価格の両立を目指します。</p>
-        </article>
-        <article class="feature-card">
+          <strong>VIEW MORE</strong>
+        </a>
+        <a class="business-card" href="oem-odm.html" style="--card-image: url('assets/hero-oem-odm.png');">
           <span>03</span>
-          <h2 data-i18n="featureOemTitle">OEM・ODM</h2>
+          <h3 data-i18n="serviceOem">OEM / ODM事業</h3>
           <p data-i18n="featureOemBody">お客様のブランドや販売計画に合わせた製品づくりのご相談に対応します。</p>
-        </article>
+          <strong>VIEW MORE</strong>
+        </a>
+        <a class="business-card business-card-online" href="online-shop.html" style="--card-image: url('assets/hero-rakuten-store.png');">
+          <span>04</span>
+          <h3 data-i18n="serviceOnlineShop">オンラインショップ運営</h3>
+          <p data-i18n="rakutenLead">法人・店舗向けのご相談は当サイトのお問い合わせへ、個人のお客様のご購入は楽天市場店をご利用ください。</p>
+          <strong>VIEW MORE</strong>
+        </a>
+      </section>
+
+      <section class="section split-section">
+        <div>
+          <p class="section-kicker">News</p>
+          <h2 data-i18n="latestNewsTitle">お知らせ</h2>
+        </div>
+        <a class="text-link" href="news.html" data-i18n="latestNewsLink">お知らせ一覧を見る</a>
+      </section>
+      <section class="section mini-news-grid" data-home-news aria-label="Latest news"></section>
+
+      <section class="section company-teaser">
+        <div class="company-teaser-image" style="background-image: url('assets/hero-oem-odm.png');"></div>
+        <div class="content-panel">
+          <p class="section-kicker">Company</p>
+          <h2 data-i18n="homeCompanyTitle">FJSインターナショナルについて</h2>
+          <p data-i18n="homeCompanyBody">FJSインターナショナル株式会社は、インテリア製品、寝具、生活雑貨、食品など、暮らしに関わる幅広い商品を取り扱っています。商品企画・開発、ブランドとの協業、OEM・ODM、オンライン販売などを通じて、市場のニーズに応える商品とサービスを提供しています。</p>
+          <a class="primary-link" href="company.html" data-i18n="homeCompanyLink">会社概要を見る</a>
+        </div>
       </section>
 
       <section class="section soft-cta">
@@ -94,21 +87,8 @@
       </section>
     </main>
 
-    <footer class="site-footer">
-      <p>Copyright © 2019 FJS International. All Rights Reserved.</p>
-    </footer>
-
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="floating-menu" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="floating-menu" id="floating-menu" aria-label="Primary navigation">
-      <a href="index.html" data-page-link="home" data-i18n="menuHome">ホーム</a>
-      <a href="company.html" data-page-link="company" data-i18n="menuCompany">会社概要</a>
-      <a href="products.html" data-page-link="products" data-i18n="menuProducts">製品案内</a>
-      <a href="news.html" data-page-link="news" data-i18n="menuNews">お知らせ</a>
-      <a href="clients.html" data-page-link="clients" data-i18n="menuClients">主要取引先</a>
-      <a href="contact.html" data-page-link="contact" data-i18n="menuContact">お問い合わせ</a>
-    </nav>
+    <footer class="site-footer"></footer>
+    <nav class="floating-menu" id="floating-menu" aria-label="Primary navigation"></nav>
     <script src="app.js"></script>
   </body>
 </html>

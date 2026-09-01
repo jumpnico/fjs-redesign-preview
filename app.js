@@ -337,6 +337,7 @@ const serviceLinks = [
 ];
 
 const primaryLinks = [
+  { href: "index.html", key: "menuHome", page: "home" },
   { href: "news.html", key: "menuNews", page: "news" },
   { href: "company.html", key: "menuCompany", page: "company" },
   { href: "service.html", key: "menuService", page: "service", children: serviceLinks },

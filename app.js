@@ -419,6 +419,15 @@ function initGlobalChrome() {
       </div>
     `;
   }
+
+  if (!document.querySelector(".back-to-top")) {
+    const backToTop = document.createElement("button");
+    backToTop.className = "back-to-top";
+    backToTop.type = "button";
+    backToTop.setAttribute("aria-label", "Back to top");
+    backToTop.innerHTML = `<span aria-hidden="true">↑</span><strong>TOP</strong>`;
+    document.body.append(backToTop);
+  }
 }
 
 function setMenu(open) {
@@ -430,6 +439,21 @@ function setMenu(open) {
   document.body.classList.toggle("menu-open", open);
   menuButton.setAttribute("aria-expanded", String(open));
   menuButton.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+}
+
+function setupBackToTop() {
+  const button = document.querySelector(".back-to-top");
+  if (!button) return;
+
+  function updateVisibility() {
+    button.classList.toggle("is-visible", window.scrollY > 600);
+  }
+
+  button.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+  window.addEventListener("scroll", updateVisibility, { passive: true });
+  updateVisibility();
 }
 
 function setLanguage(lang) {
@@ -623,3 +647,4 @@ setLanguage(localStorage.getItem("fjs-lang") || "ja");
 setupHeroSlider();
 setupProductModal();
 setupHomeNews();
+setupBackToTop();

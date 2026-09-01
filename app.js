@@ -102,7 +102,7 @@ const translations = {
     salesChannelsLabel: "主要販売先",
     salesChannels: "全国の量販店 ホームセンター等",
     affiliateLabel: "関連会社",
-    affiliate: "フジスター株式会社\nNICO SG PTE. LTD.",
+    affiliate: "フジスター株式会社",
     productsKicker: "Products",
     productsTitle: "製品案内",
     productsLead: "寝具・インテリア、生活雑貨、食品、防災用品からOEM・ODMまで、暮らしに近いカテゴリーを幅広く扱っています。",
@@ -264,7 +264,7 @@ const translations = {
     salesChannelsLabel: "Main sales channels",
     salesChannels: "Mass retailers, home centers, and related channels across Japan",
     affiliateLabel: "Affiliated company",
-    affiliate: "Fujistar Co., Ltd.\nNICO SG PTE. LTD.",
+    affiliate: "Fujistar Co., Ltd.",
     productsKicker: "Products",
     productsTitle: "Products",
     productsLead: "We handle categories close to daily life, from bedding, interiors, household goods, food, and disaster-preparedness items to OEM and ODM.",
@@ -414,7 +414,7 @@ function initGlobalChrome() {
       <div class="footer-inner">
         <p><strong>FJS International Co., Ltd.</strong></p>
         <p>〒103-0013 東京都中央区日本橋人形町2-6-7 SIL人形町ビル 11F</p>
-        <p>TEL 03-5801-9965&nbsp;&nbsp;MAIL connect@fjsi.co.jp</p>
+        <p>MAIL connect@fjsi.co.jp</p>
         <p class="footer-copy">© FJS International Co., Ltd. All Rights Reserved.</p>
       </div>
     `;

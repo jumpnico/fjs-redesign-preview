@@ -839,6 +839,7 @@ p { color: var(--ink-soft); font-size: 17px; }
   align-items: flex-start !important;
   cursor: pointer;
   display: flex !important;
+  flex-wrap: nowrap !important;
   font-weight: 700 !important;
   gap: 12px;
   line-height: 1.65;
@@ -847,15 +848,23 @@ p { color: var(--ink-soft); font-size: 17px; }
 }
 .privacy-consent input,
 .checkbox-label input {
+  accent-color: var(--ai);
+  appearance: auto;
+  border-radius: 3px;
+  box-shadow: none;
+  display: block;
   flex: 0 0 auto;
   height: 18px;
   margin: 0;
-  margin-top: 0.35em;
+  margin-top: 0.2em;
   min-height: 0;
+  padding: 0;
   width: 18px;
 }
 .privacy-consent span,
 .checkbox-label span {
+  display: block;
+  flex: 1 1 auto;
   min-width: 0;
 }
 .privacy-consent a,
@@ -1685,6 +1694,17 @@ html[lang="en"] [data-policy-lang="ja"] {
   .form-field textarea {
     border-radius: 12px;
     min-height: 52px;
+  }
+  .privacy-consent,
+  .checkbox-label {
+    gap: 10px;
+    line-height: 1.6;
+  }
+  .privacy-consent input,
+  .checkbox-label input {
+    height: 18px;
+    margin-top: 0.16em;
+    width: 18px;
   }
   .contact-editorial-image img {
     aspect-ratio: 4 / 3;

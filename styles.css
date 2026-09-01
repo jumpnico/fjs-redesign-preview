@@ -834,18 +834,31 @@ p { color: var(--ink-soft); font-size: 17px; }
   font-size: 15px;
   margin-bottom: 10px;
 }
+.privacy-consent,
 .checkbox-label {
   align-items: flex-start !important;
+  cursor: pointer;
   display: flex !important;
   font-weight: 700 !important;
+  gap: 12px;
+  line-height: 1.65;
+  min-height: 44px;
+  padding: 4px 0;
 }
+.privacy-consent input,
 .checkbox-label input {
   flex: 0 0 auto;
   height: 18px;
-  margin-top: 5px;
+  margin: 0;
+  margin-top: 0.35em;
   min-height: 0;
   width: 18px;
 }
+.privacy-consent span,
+.checkbox-label span {
+  min-width: 0;
+}
+.privacy-consent a,
 .checkbox-label a {
   color: var(--ai);
   text-decoration: underline;
@@ -1462,7 +1475,7 @@ html[lang="en"] [data-policy-lang="ja"] {
   inset: 0;
   opacity: 0;
   overflow: hidden;
-  padding: clamp(98px, 14svh, 132px) clamp(22px, 7vw, 86px) clamp(14px, 4svh, 36px);
+  padding: clamp(98px, 13svh, 124px) clamp(22px, 7vw, 86px) clamp(28px, 5svh, 52px);
   pointer-events: none;
   position: fixed;
   transition: opacity 220ms ease;
@@ -1479,12 +1492,12 @@ html[lang="en"] [data-policy-lang="ja"] {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
   display: grid;
-  gap: clamp(4px, 1.4svh, 14px);
+  gap: clamp(3px, 1.1svh, 12px);
   margin-left: auto;
-  max-height: calc(100svh - clamp(118px, 18svh, 168px));
+  max-height: calc(100svh - clamp(126px, 18svh, 176px));
   max-width: 640px;
   overflow: hidden;
-  padding: clamp(20px, 4.8svh, 48px) clamp(22px, 5vw, 54px);
+  padding: clamp(18px, 3.8svh, 38px) clamp(22px, 5vw, 54px) clamp(28px, 5svh, 52px);
   width: min(640px, 100%);
 }
 .overlay-nav-group > a {
@@ -1495,8 +1508,8 @@ html[lang="en"] [data-policy-lang="ja"] {
   font-size: clamp(26px, min(4vw, 5.8svh), 48px);
   font-weight: 800;
   justify-content: space-between;
-  line-height: 1.1;
-  padding: clamp(7px, 1.3svh, 12px) 0 clamp(9px, 1.7svh, 18px);
+  line-height: 1.08;
+  padding: clamp(6px, 1.1svh, 10px) 0 clamp(8px, 1.4svh, 14px);
   text-decoration: none;
 }
 .overlay-nav-group > a:hover,
@@ -1505,8 +1518,8 @@ html[lang="en"] [data-policy-lang="ja"] {
 }
 .overlay-subnav {
   display: grid;
-  gap: clamp(3px, 0.8svh, 8px);
-  padding: clamp(7px, 1.2svh, 14px) 0 clamp(3px, 0.8svh, 8px) clamp(16px, 4vw, 38px);
+  gap: clamp(3px, 0.7svh, 7px);
+  padding: clamp(6px, 1svh, 12px) 0 clamp(5px, 1svh, 10px) clamp(16px, 4vw, 38px);
 }
 .overlay-subnav a {
   color: var(--ink-soft);
@@ -1689,7 +1702,7 @@ html[lang="en"] [data-policy-lang="ja"] {
   .floating-menu-panel {
     max-height: calc(100svh - 128px);
     max-width: none;
-    padding: 20px 22px;
+    padding: 20px 22px 28px;
   }
   .overlay-subnav a {
     font-size: clamp(17px, 4.1vw, 20px);
@@ -1704,8 +1717,8 @@ html[lang="en"] [data-policy-lang="ja"] {
   .floating-menu-panel {
     border-radius: 28px;
     gap: 3px;
-    max-height: calc(100svh - 112px);
-    padding: 18px 42px;
+    max-height: calc(100svh - 118px);
+    padding: 16px 42px 26px;
   }
   .overlay-nav-group > a {
     font-size: clamp(24px, 5svh, 38px);
@@ -1727,7 +1740,7 @@ html[lang="en"] [data-policy-lang="ja"] {
   }
   .floating-menu-panel {
     max-height: calc(100svh - 120px);
-    padding: 16px 20px;
+    padding: 16px 20px 24px;
   }
   .overlay-subnav a {
     font-size: clamp(16px, 3.8vw, 18px);

@@ -330,19 +330,19 @@ let currentHeroSlide = 0;
 let heroTimer;
 
 const serviceLinks = [
-  { href: "collaboration.html", key: "serviceCollaboration", page: "collaboration" },
-  { href: "product-development.html", key: "serviceProductDevelopment", page: "product-development" },
-  { href: "oem-odm.html", key: "serviceOem", page: "oem-odm" },
-  { href: "online-shop.html", key: "serviceOnlineShop", page: "online-shop" }
+  { href: "/collaboration/", key: "serviceCollaboration", page: "collaboration" },
+  { href: "/product-development/", key: "serviceProductDevelopment", page: "product-development" },
+  { href: "/oem-odm/", key: "serviceOem", page: "oem-odm" },
+  { href: "/online-shop/", key: "serviceOnlineShop", page: "online-shop" }
 ];
 
 const primaryLinks = [
-  { href: "index.html", key: "menuHome", page: "home" },
-  { href: "news.html", key: "menuNews", page: "news" },
-  { href: "company.html", key: "menuCompany", page: "company" },
-  { href: "service.html", key: "menuService", page: "service", children: serviceLinks },
-  { href: "contact.html", key: "menuContact", page: "contact" },
-  { href: "access.html", key: "menuAccess", page: "access" }
+  { href: "/", key: "menuHome", page: "home" },
+  { href: "/news/", key: "menuNews", page: "news" },
+  { href: "/company/", key: "menuCompany", page: "company" },
+  { href: "/service/", key: "menuService", page: "service", children: serviceLinks },
+  { href: "/contact/", key: "menuContact", page: "contact" },
+  { href: "/access/", key: "menuAccess", page: "access" }
 ];
 
 function linkText(key, lang = document.documentElement.lang || "ja") {
@@ -359,12 +359,18 @@ function renderServiceChildren(className = "") {
   `).join("");
 }
 
+function sitePath(value) {
+  if (!value) return "";
+  if (/^(https?:|mailto:|tel:|\/|#)/.test(value)) return value;
+  return `/${value}`;
+}
+
 function initGlobalChrome() {
   const header = document.querySelector(".site-header");
   if (header) {
     header.innerHTML = `
-      <a class="brand" href="index.html" aria-label="FJSインターナショナル株式会社">
-        <img src="assets/fjsi-logo-transparent.png" alt="FJSインターナショナル株式会社">
+      <a class="brand" href="/" aria-label="FJSインターナショナル株式会社">
+        <img src="/assets/fjsi-logo-transparent.png" alt="FJSインターナショナル株式会社">
       </a>
       <div class="site-header-right">
         <div class="language-switch" aria-label="Language switch">
@@ -515,7 +521,7 @@ async function setupHomeNews() {
   if (!container) return;
   const lang = document.documentElement.lang || "ja";
   try {
-    const response = await fetch("data/posts.json", { cache: "no-store" });
+    const response = await fetch("/data/posts.json", { cache: "no-store" });
     const data = await response.json();
     const posts = (data.posts || [])
       .filter((post) => post.status !== "draft")
@@ -523,7 +529,7 @@ async function setupHomeNews() {
       .slice(0, 3);
     container.innerHTML = posts.map((post) => `
       <article class="mini-news-card">
-        <img src="${escapeHtml(post.cover || "assets/home-hero-lifestyle.png")}" alt="">
+        <img src="${escapeHtml(sitePath(post.cover || "assets/home-hero-lifestyle.png"))}" alt="">
         <div>
           <time datetime="${escapeHtml(post.date)}">${escapeHtml(formatDate(post.date, lang))}</time>
           <h3>${renderNewsTitle(pickLocalized(post.title, lang))}</h3>
@@ -612,8 +618,8 @@ function setupProductModal() {
       image.src = imageUrl;
       title.textContent = button.dataset[`productTitle${lang === "ja" ? "Ja" : "En"}`] || button.dataset.productTitleJa;
       body.textContent = button.dataset[`productBody${lang === "ja" ? "Ja" : "En"}`] || button.dataset.productBodyJa;
-      link.href = button.dataset.productLink || "contact.html";
-      link.target = link.href.endsWith("contact.html") ? "_self" : "_blank";
+      link.href = sitePath(button.dataset.productLink || "/contact/");
+      link.target = link.href.endsWith("/contact/") ? "_self" : "_blank";
       modal.classList.add("is-open");
       modal.setAttribute("aria-hidden", "false");
     });

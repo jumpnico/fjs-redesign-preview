@@ -52,18 +52,24 @@ function renderBody(text) {
     .join("");
 }
 
+function sitePath(value) {
+  if (!value) return "";
+  if (/^(https?:|mailto:|tel:|\/|#)/.test(value)) return value;
+  return `/${value}`;
+}
+
 function renderCover(post) {
   if (!post.cover) return "";
   return `
     <div class="news-cover">
-      <img src="${escapeHtml(post.cover)}" alt="">
+      <img src="${escapeHtml(sitePath(post.cover))}" alt="">
     </div>
   `;
 }
 
 async function loadPosts() {
   if (postsCache.length) return postsCache;
-  const response = await fetch("data/posts.json", { cache: "no-store" });
+  const response = await fetch("/data/posts.json", { cache: "no-store" });
   const data = await response.json();
   postsCache = (data.posts || [])
     .filter((post) => post.status !== "draft")

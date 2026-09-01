@@ -965,7 +965,8 @@ p { color: var(--ink-soft); font-size: 17px; }
 .news-cover {
   align-items: center;
   aspect-ratio: 4 / 3;
-  background: var(--paper);
+  background: #F7FBFF;
+  border: 1px solid #E5EEF6;
   border-radius: var(--radius-md);
   display: flex;
   justify-content: center;
@@ -979,6 +980,7 @@ p { color: var(--ink-soft); font-size: 17px; }
   height: 100%;
   margin-bottom: 0;
   object-fit: contain;
+  object-position: center;
   width: 100%;
 }
 .news-card-body {

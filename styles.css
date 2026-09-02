@@ -1702,8 +1702,11 @@ html[lang="en"] [data-policy-lang="ja"] {
   }
   .privacy-consent input,
   .checkbox-label input {
+    align-self: flex-start;
     height: 18px;
     margin-top: 0.16em;
+    min-height: 18px;
+    min-width: 18px;
     width: 18px;
   }
   .contact-editorial-image img {

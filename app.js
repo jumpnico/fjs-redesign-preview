@@ -433,7 +433,6 @@ function initGlobalChrome() {
       <div class="footer-inner">
         <p><strong>FJS International Co., Ltd.</strong></p>
         <p>〒103-0013 東京都中央区日本橋人形町2-6-7 SIL人形町ビル 11F</p>
-        <p>MAIL connect@fjsi.co.jp</p>
         <p class="footer-legal"><a href="/privacy/" data-i18n="footerPrivacy">プライバシーポリシー</a></p>
         <p class="footer-copy">© FJS International Co., Ltd. All Rights Reserved.</p>
       </div>

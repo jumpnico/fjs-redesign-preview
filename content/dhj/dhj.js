@@ -5,8 +5,8 @@
       node.textContent = node.dataset[key];
     });
     document.title = lang === 'en'
-      ? 'Dou Huang Jin | Fuzhu & Video Recipes | FJS International'
-      : '豆黄金｜腐竹の食べ方・簡単レシピ | FJSインターナショナル株式会社';
+      ? 'Dou Huang Jin | Organic Yuba & Video Recipes | FJS International'
+      : '豆黄金｜有機揚げ湯葉ロール・有機腐竹の食べ方・簡単レシピ | FJSインターナショナル株式会社';
   }
   window.addEventListener('fjs-language-change', event => localize(event.detail.lang));
   localize(document.documentElement.lang);

@@ -118,3 +118,30 @@ html[lang="en"] .dhj-language-note { display: block; }
 .dhj-hero-panel figcaption strong { margin-top: 2cqi; white-space: nowrap; }
 .dhj-hero-panel figcaption small { font-size: 4cqi; }
 @media (max-width: 700px) { .dhj-hero-panel { border-radius: 18px; } }
+/* Organic certification presentation */
+.dhj-certifications { border-bottom: 1px solid var(--line); }
+.dhj-cert-list > div { display: flex; align-items: center; gap: 22px; padding-block: 20px; border-top: 1px solid var(--line); }
+.dhj-cert-list img { width: 104px; height: 104px; object-fit: contain; flex-shrink: 0; }
+.dhj-cert-list h4 { margin: 0 0 6px; font-size: 17px; }
+.dhj-cert-list p { color: var(--ink-soft); font-size: 13px; margin: 0; }
+@media (max-width: 650px) {
+        .dhj-cert-list > div { gap: 16px; }
+  .dhj-cert-list img { width: 82px; height: 82px; }
+}
+
+/* Certification marks share the image frame with centered product titles. */
+.dhj-hero-panel > img { width: 100%; height: 100%; object-fit: cover; }
+.dhj-hero-cert { position: absolute; inset: 0; mix-blend-mode: multiply; pointer-events: none; }
+.dhj-hero-cert img { position: absolute; left: 7%; width: 12%; height: 12cqi; object-fit: contain; border-radius: 0; }
+.dhj-hero-panel:nth-child(2) .dhj-hero-cert img { left: 3%; }
+.dhj-hero-cert img:first-child { top: calc(5% + 3.6cqi - 6cqi); }
+.dhj-hero-cert img:nth-child(2) { top: calc(5% + 15.3cqi - 6cqi); }
+.dhj-hero-panel figcaption { top: 5%; left: 24%; right: 24%; }
+.dhj-hero-panel figcaption span, .dhj-hero-panel figcaption strong { font-size: 6cqi; }
+.dhj-hero-panel figcaption small { font-size: 4cqi; }
+.dhj-product-cert-title { margin: 26px 0 4px; font-size: 16px; }
+.dhj-spec-card .dhj-cert-list { margin-bottom: 22px; }
+@media (min-width: 651px) {
+  .dhj-spec-grid { row-gap: 0; }
+  .dhj-spec-card { display: grid; grid-template-rows: subgrid; grid-row: span 4; align-items: start; }
+}
